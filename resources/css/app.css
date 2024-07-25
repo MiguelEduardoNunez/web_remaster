@@ -1,0 +1,21 @@
+* { font-family: 'Muli',sans-serif; }
+
+.header_logo { width: 240px; height: auto; }
+
+.nav-link { color: #000; /* Cambia el color del texto a negro */ font-weight: bold; /* Hace que el texto esté en negrita */ text-decoration: none; /* Elimina el subrayado del texto */ }
+
+.header_azul { height: 7vh; }
+
+/* Estilo para el menú desplegable */
+.dropdown-menu { max-width: 320px; /* Ancho máximo del menú */ padding: 10px; /* Espacio interno */ border-radius: 8px; /* Bordes redondeados */ box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra */ }
+
+.dropdown-item { font-size: 14px; /* Tamaño de fuente */ padding: 8px 12px; /* Espaciado interno */ border-radius: 4px; /* Bordes redondeados */ transition: background-color 0.3s ease; /* Transición para el fondo */ }
+
+.dropdown-item:hover { background-color: #004899; /* Fondo al pasar el mouse */ }
+
+.dropdown-item:active { background-color: #004899; /* Fondo al hacer clic */ }
+
+/* resources/css/custom.css */
+.carousel-container { width: 100%; display: flex; justify-content: center; align-items: center; padding: 20px 0; /* Añade padding arriba y abajo para darle espacio */ }
+
+.carousel { width: 80%; }

@@ -7,57 +7,40 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <title>{{ config('app.name', 'Laravel') }}</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
-    {{-- <!-- Scripts -->
-        @vite(['resources/css/app.css', 'resources/js/app.js']) --}}
-
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="{{ asset('adminlte/plugins/fontawesome-free/css/all.min.css') }}">
-
-    <!-- ICheck -->
-    <link rel="stylesheet" href="{{ asset('adminlte/plugins/icheck-bootstrap/icheck-bootstrap.min.css') }}">
-
-    <!-- Select2 -->
-    <link rel="stylesheet" href="{{ asset('adminlte/plugins/select2/css/select2.min.css') }}">
-
-    <!-- OverlayScrollbars -->
-    <link rel="stylesheet" href="{{ asset('adminlte/plugins/overlayScrollbars/css/OverlayScrollbars.min.css') }}">
-
-    <!-- Tempusdominus Bootstrap 4 -->
-    <link rel="stylesheet" href="{{ asset('adminlte/plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css') }}">
-
-    <!-- Sweet Alert2 -->
-    <link rel="stylesheet" href="{{ asset('adminlte/plugins/sweetalert2/sweetalert2.min.css') }}">
-
-    <!-- AdminLTE App -->
-    <link rel="stylesheet" href="{{ asset('adminlte/css/adminlte.css') }}">
 </head>
+
 <body class="hold-transition sidebar-mini layout-fixed layout-navbar-fixed">
-<div class="content-wrapper">
-    <!-- Header Content -->
-    <div class="content-header">
-        <div class="container-fluid">
-            <div class="row mb-2">
-                <div class="col-12">
-                    <ol class="breadcrumb float-sm-right">
-                        <li class="breadcrumb-item"><a href="{{ route('dashboard') }}">Inicio</a></li>
-                        <li class="breadcrumb-item active">{{ $page ?? '' }}</li>
-                    </ol>
-                </div>
-            </div>
+    <!-- Page Content -->
+    <div class="content-wrapper">
+        <!-- Header Content -->
+        <div class="content-header">
+            <x-header />
         </div>
+
+        <!-- Main Content -->
+        <section class="content">
+            <div class="container-fluid">
+                {{ $slot }}
+            </div>
+        </section>
     </div>
 
-    <!-- Main Content -->
-    <section class="content">
-        <div class="container-fluid">
-            @include('sweetalert::alert')
-            {{ $slot }}
+    <!-- Page Foot -->
+    <footer class="main-footer">
+        <strong>Copyright &copy; 2024 - <a href="#">Fabrica de Software CTPI</a></strong>
+        <div class="float-right d-none d-sm-inline-block">
+            <b>Version</b> 1.0
         </div>
-    </section>
-
-    <!-- Bootstrap 4 -->
-    <script src="{{ asset('adminlte/plugins/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
-</div>
+    </footer>
+    <!-- Bootstrap 5.3 -->
+    <!-- Bootstrap JavaScript dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"></script>
 </body>
+
 </html>
