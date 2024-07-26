@@ -65,7 +65,7 @@
 
     @media (max-width: 767px) {
         .card {
-            height: 23vh; /* Reduce la altura de la tarjeta en pantallas pequeñas */
+            height: 26vh; /* Reduce la altura de la tarjeta en pantallas pequeñas */
         }
 
         .card-img-top {
