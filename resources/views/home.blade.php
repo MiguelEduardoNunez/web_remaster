@@ -16,9 +16,8 @@
     <x-menu />
     <x-carousel />
     <x-info />
-    <section class="mt-4">
-        <x-nuestros-servicios />
-    </section>
+    <x-nuestros-servicios />
+
 
 
     <!-- Bootstrap 5.3 -->

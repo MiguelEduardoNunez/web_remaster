@@ -1,7 +1,8 @@
 <style>
     .container-servicios {
         background-color: #eab205;
-        padding: 20px;
+        padding: 80px 30px 30px;
+        
         text-align: center;
     }
 
@@ -82,12 +83,24 @@
         .servicio-card {
             height: 52vh;
             width: 100%;
+            
+        }
+        .servicio-card-img-top {
+        width: 30%;
+        height: auto;
+        margin-bottom: 20px;
         }
     }
 
     @media (min-width: 768px) {
         .servicio-card {
             height: 350px;
+           
+        }
+        .servicio-card-img-top {
+        width: 20%;
+        height: auto;
+        margin-bottom: 20px;
         }
     }
 
@@ -99,7 +112,7 @@
     }
 </style>
 
-<div class="container-servicios p-5">
+<div class="container-servicios border border-dark">
     <h5 class="text-black">Nuestros servicios</h5>
     <h2 class="text-black">Ofreciendo Siempre el mejor servicio</h2>
 
