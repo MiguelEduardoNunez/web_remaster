@@ -65,7 +65,7 @@
 
     @media (max-width: 767px) {
         .card {
-            height: 26vh; /* Reduce la altura de la tarjeta en pantallas pequeñas */
+            height: 27vh; /* Reduce la altura de la tarjeta en pantallas pequeñas */
         }
 
         .card-img-top {
@@ -112,9 +112,9 @@
                     <div class="card-back">
                         <div class="card-body d-flex flex-column align-items-center">
                             <h5 class="card-title mb-3">Soporte Técnico</h5>
-                            <a href="https://api.whatsapp.com/send?phone=573174327901" class="btn w-50 mb-2 text-white btn-primary-custom" role="button" target="_blank">nivel 1 Popayán</a>
-                            <a href="https://api.whatsapp.com/send?phone=573174274601" class="btn w-50 mb-2 text-white btn-primary-custom" role="button" target="_blank">nivel 1 Guapi</a>
-                            <a href="https://api.whatsapp.com/send?phone=573162697428" class="btn w-50 text-white btn-primary-custom" role="button" target="_blank">nivel 2</a>
+                            <a href="https://api.whatsapp.com/send?phone=573174327901" class="btn w-50 mb-2 text-white btn-primary-custom" role="button" target="_blank">Nivel 1 Popayán</a>
+                            <a href="https://api.whatsapp.com/send?phone=573174274601" class="btn w-50 mb-2 text-white btn-primary-custom" role="button" target="_blank">Nivel 1 Guapi</a>
+                            <a href="https://api.whatsapp.com/send?phone=573162697428" class="btn w-50 text-white btn-primary-custom" role="button" target="_blank">Nivel 2</a>
                         </div>
                     </div>
                 </div>
