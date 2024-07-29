@@ -1,6 +1,7 @@
 <style>
     .container {
         perspective: 1000px; /* Perspectiva para el efecto 3D */
+        margin-bottom: 20px
     }
 
     .card {

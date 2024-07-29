@@ -1,8 +1,7 @@
 <style>
     .container-servicios {
         background-color: #eab205;
-        padding: 80px 30px 30px;
-        
+        padding: 40px 30px 30px;
         text-align: center;
     }
 
@@ -112,13 +111,13 @@
     }
 </style>
 
-<div class="container-servicios border border-dark">
+<div class="container-servicios" >
     <h5 class="text-black">Nuestros servicios</h5>
     <h2 class="text-black">Ofreciendo Siempre el mejor servicio</h2>
 
-    <div class="container-servicios">
+    <div class="container-servicios" id="nuestros-servicios">
         <div class="row">
-            <div class="col-12 col-md-6 col-lg-4 mb-4">
+            <div class="col-12 col-md-6 col-lg-4 mb-4" id="servicio-ISP">
                 <div class="servicio-card">
                     <div class="servicio-card-inner">
                         <div class="card-front-services">
@@ -138,7 +137,7 @@
                 </div>
             </div>
 
-            <div class="col-12 col-md-6 col-lg-4 mb-4">
+            <div class="col-12 col-md-6 col-lg-4 mb-4" id="servicio-CyD">
                 <div class="servicio-card">
                     <div class="servicio-card-inner">
                         <div class="card-front-services">
@@ -158,7 +157,7 @@
                 </div>
             </div>
 
-            <div class="col-12 col-md-6 col-lg-4 mb-4">
+            <div class="col-12 col-md-6 col-lg-4 mb-4" id="servicio-TV">
                 <div class="servicio-card">
                     <div class="servicio-card-inner">
                         <div class="card-front-services">
@@ -178,7 +177,7 @@
                 </div>
             </div>
 
-            <div class="col-12 col-md-6 col-lg-4 mb-4">
+            <div class="col-12 col-md-6 col-lg-4 mb-4" id="servicio-VoIP">
                 <div class="servicio-card">
                     <div class="servicio-card-inner">
                         <div class="card-front-services">
@@ -198,7 +197,7 @@
                 </div>
             </div>
 
-            <div class="col-12 col-md-6 col-lg-4 mb-4">
+            <div class="col-12 col-md-6 col-lg-4 mb-4" id="servicio-Telecomu">
                 <div class="servicio-card">
                     <div class="servicio-card-inner">
                         <div class="card-front-services">
@@ -219,7 +218,7 @@
                 </div>
             </div>
 
-            <div class="col-12 col-md-6 col-lg-4 mb-4">
+            <div class="col-12 col-md-6 col-lg-4 mb-4" id="servicio-CentroDatos">
                 <div class="servicio-card">
                     <div class="servicio-card-inner">
                         <div class="card-front-services">

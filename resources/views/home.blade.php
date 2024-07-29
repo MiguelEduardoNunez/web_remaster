@@ -17,8 +17,8 @@
     <x-carousel />
     <x-info />
     <x-nuestros-servicios />
-
-
+    <x-zona-interes />
+    <x-footer />
 
     <!-- Bootstrap 5.3 -->
     <!-- Bootstrap JavaScript dependencies -->
