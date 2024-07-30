@@ -31,7 +31,7 @@
             height: 6vh;
         }
     }
-  
+
 </style>
 
 <nav class="header_azul navbar navbar-expand-lg navbar-dark color_fondo" aria-label="Header Azul">
@@ -40,12 +40,10 @@
             <a class="navbar-brand d-flex align-items-center" href="mailto:info@sepcom.com.co">
                 <img src="{{ asset('images/email_icon.png') }}" alt="Email Icon" class="me-2" width="20" height="20">
                 <span class="d-none d-md-inline">info@sepcom.com.co</span>
-                <span class="d-inline d-md-none" style="font-size: 12px;">info@sepcom.com.co</span>
             </a>
             <a class="navbar-brand d-flex align-items-center ms-4" href="tel: 01 8000 189 098">
                 <img src="{{ asset('images/phone_icon.png') }}" alt="Phone Icon" class="me-2" width="20" height="20">
                 <span class="d-none d-md-inline">(+123) 456-7890</span>
-                <span class="d-inline d-md-none" style="font-size: 12px;">(+123) 456-7890</span>
             </a>
         </div>
         <div class="d-flex align-items-center">

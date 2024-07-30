@@ -52,8 +52,8 @@
 </style>
 
 <div class="container-intereses">
-    <h1>Zona De Interés</h1>
-    <div class="row justify-content-center mt-4">
+    <h1 class="mb-4">Zona De Interés</h1>
+    <div class="row justify-content-center">
         <div class="col-lg-3 col-md-6 col-sm-12 mb-4 mb-md-0">
             <div class="interest-card">
                 <a href="https://www.fiscalia.gov.co/colombia/" target="_blank">
