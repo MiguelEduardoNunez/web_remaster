@@ -76,7 +76,7 @@
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownInfo" role="button" data-bs-toggle="dropdown" aria-expanded="false">Información para el Usuario</a>
                     <ul class="dropdown-menu dropdown-menu-end text-center" aria-labelledby="navbarDropdownInfo">
-                        <li><a class="dropdown-item" href="#">Formulario de PQRS</a></li>
+                        <li><a class="dropdown-item" href="/formularioPqrs">Formulario de PQRS</a></li>
                         <li><a class="dropdown-item" href="{{ asset('archivos/PROCEDIMIENTO Y TRAMITE DE PQRS.pdf') }}" target="_blank">Procedimiento Trámite de PQRS</a></li>
                         <li><a class="dropdown-item" href="{{ asset('archivos/Seguridad-en-plantas-IP.pdf') }}" target="_blank">Seguridad Plantas IP</a></li>
                         <li><a class="dropdown-item" href="{{ asset('archivos/AUTORIDADES-DE-CONTROL-Y-VIGILANCIA.pdf') }}" target="_blank">Autoridades de control y Vigilancia</a></li>
