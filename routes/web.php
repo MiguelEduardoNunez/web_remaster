@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\FormularioPQRSController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -19,3 +20,9 @@ Route::get('/', function () {
 Route::get('/nosotros', function () {
     return view('nosotros');
 });
+Route::get('/formularioPqrs', function () {
+    return view('formularioPqrs');
+})->name('formulario.pqrs');
+
+Route::post('/enviar-pqrs', [FormularioPQRSController::class, 'enviarPQRS'])->name('enviar.pqrs');
+
