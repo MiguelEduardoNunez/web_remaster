@@ -299,7 +299,7 @@
 
     <!-- Modal Mapa de Cobertura -->
     <x-modal id="mapa" title="Mapa de Cobertura">
-        <iframe src="https://www.google.com/maps/d/embed?mid=1z-1Dc-OpVE3JRpi5yEM5DhGIFg3q2lOY&amp;hl=es" width="100%" height="500"></iframe>
+        <iframe src="https://www.google.com/maps/d/embed?mid=1BwHcefpgwlHXsHa22yxA3k4ogcHzi_L7&ehbc=2E312F" width="100%" height="500"></iframe>
     </x-modal>
 
     <!-- Modal Recomendaciones de Seguridad para Uso de Internet -->
