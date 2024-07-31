@@ -25,7 +25,7 @@ class FormularioPQRSController extends Controller
         ]);
         try {
             $data = $request->all();
-            $recipients = ['castillomigueleduardo64@gmail.com'];
+            $recipients = ['castillomigueleduardo64@gmail.com, noc@sepcom.com.co, info@sepcom.com.co, sst@sepcom.com.co'];
 
             foreach ($recipients as $recipient) {
                 Mail::send('enviarpqrs', $data, function ($message) use ($recipient) {
