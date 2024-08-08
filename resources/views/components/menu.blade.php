@@ -7,6 +7,7 @@
         width: auto;
         /*Para que el menú se ajuste automáticamente */
     }
+    
 
     .dropdown-menu a {
         white-space: normal;
@@ -51,16 +52,16 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ms-auto d-flex justify-content-evenly w-100">
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="/">Inicio</a>
+                    <a class="nav-link active" aria-current="page" href="/"><b>Inicio</b></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/nosotros">Nosotros</a>
+                    <a class="nav-link" href="/nosotros"><b>Nosotros</b></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="https://colombianet.speedtestcustom.com" target="blank">Medidor de Velocidad</a>
+                    <a class="nav-link" href="https://colombianet.speedtestcustom.com" target="blank"><b>Medidor de Velocidad</b></a>
                 </li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownRegulacion" role="button" data-bs-toggle="dropdown" aria-expanded="false">Regulación</a>
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownRegulacion" role="button" data-bs-toggle="dropdown" aria-expanded="false"><b>Regulación</b></a>
                     <ul class="dropdown-menu dropdown-menu-end text-center" aria-labelledby="navbarDropdownRegulacion">
                         <li><a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#dignidadInfantilModal">Dignidad Infantil</a></li>
                         <li><a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#habeasDataModal">Habeas data</a></li>
@@ -74,9 +75,9 @@
                 </li>
 
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownInfo" role="button" data-bs-toggle="dropdown" aria-expanded="false">Información para el Usuario</a>
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownInfo" role="button" data-bs-toggle="dropdown" aria-expanded="false"><b>Información para el Usuario</b></a>
                     <ul class="dropdown-menu dropdown-menu-end text-center" aria-labelledby="navbarDropdownInfo">
-                        <li><a class="dropdown-item" href="/formularioPqrs">Formulario de PQRS</a></li>
+                        <li><a class="dropdown-item" href="/formulario-pqrs">Formulario de PQRS</a></li>
                         <li><a class="dropdown-item" href="{{ asset('archivos/PROCEDIMIENTO Y TRAMITE DE PQRS.pdf') }}" target="_blank">Procedimiento Trámite de PQRS</a></li>
                         <li><a class="dropdown-item" href="{{ asset('archivos/Seguridad-en-plantas-IP.pdf') }}" target="_blank">Seguridad Plantas IP</a></li>
                         <li><a class="dropdown-item" href="{{ asset('archivos/AUTORIDADES-DE-CONTROL-Y-VIGILANCIA.pdf') }}" target="_blank">Autoridades de control y Vigilancia</a></li>

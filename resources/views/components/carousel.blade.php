@@ -1,5 +1,5 @@
 <style>
-    /*tamaño del contenedor del carrusel */
+    /* Tamaño del contenedor del carrusel */
     .carousel-container {
         width: 100%;
         display: flex;
@@ -8,15 +8,70 @@
         padding-top: 10px;
     }
 
-    /*tamaño del carrusel */
+    /* Tamaño del carrusel */
     .carousel {
         width: 100%;
     }
 
-    /*tamaño de las imágenes */
-    .carousel-item img {
+    /* Tamaño de las imágenes */
+    .carousel-item {
         width: 100%;
-        height: auto;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    /* Estilos del ícono de reproducción */
+    .play-icon {
+        position: absolute;
+        top: 60%;
+        left: 77%;
+        transform: translate(-50%, -50%);
+        width: 50px;
+        height: 50px;
+        z-index: 10;
+    }
+
+    /* Contenedor del ícono de reproducción */
+    .padre-play {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    /* Efecto de ondas */
+    .padre-play::before,
+    .padre-play::after {
+        content: '';
+        position: absolute;
+        top: 60%;
+        left: 77%;
+        width: 50px;
+        height: 50px;
+        background-color: rgba(255, 255, 255, 0.5);
+        border-radius: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 9;
+        animation: ripple 1.5s infinite;
+    }
+
+    /* Segunda onda */
+    .padre-play::after {
+        animation-delay: 0.75s;
+    }
+
+    /* Animación de ondas */
+    @keyframes ripple {
+        0% {
+            transform: translate(-50%, -50%) scale(0.8);
+            opacity: 1;
+        }
+
+        100% {
+            transform: translate(-50%, -50%) scale(2.5);
+            opacity: 0;
+        }
     }
 
     /* Ajuste de tamaño */
@@ -24,18 +79,21 @@
         .carousel {
             width: 100%;
         }
+
     }
 
     @media (min-width: 768px) {
         .carousel {
             width: 87%;
         }
+        
     }
 
     @media (min-width: 992px) {
         .carousel {
             width: 90%;
         }
+  
     }
 
 </style>
@@ -51,6 +109,12 @@
             </div>
             <div class="carousel-item">
                 <img src="{{ asset('images/carrousel_3.png') }}" class="d-block w-100" alt="Slide 3">
+                <a href="#" class="padre-play" data-bs-toggle="modal" data-bs-target="#videoGrooming">
+                    <img src="{{ asset('images/play_icon.png') }}" class="play-icon" alt="Play icon">
+                </a>
+            </div>
+            <div class="carousel-item">
+                <img src="{{ asset('images/publicidad1.jpeg') }}" class="d-block w-100" alt="Slide 4">
             </div>
         </div>
         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
@@ -62,4 +126,36 @@
             <span class="visually-hidden">Next</span>
         </button>
     </div>
+    <!-- Modal -->
+    <div class="modal fade" id="videoGrooming" tabindex="-1" aria-labelledby="videoModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="videoModalLabel">Que es el Grooming?</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="ratio ratio-16x9">
+                        <iframe id="videoIframe" src="" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        var videoModal = document.getElementById('videoGrooming');
+        var videoIframe = document.getElementById('videoIframe');
+        var videoUrl = "https://www.youtube.com/embed/EzAaElaOaVE?autoplay=1";
+
+        videoModal.addEventListener('show.bs.modal', function() {
+            videoIframe.src = videoUrl;
+        });
+
+        videoModal.addEventListener('hide.bs.modal', function() {
+            videoIframe.src = "";
+        });
+    });
+
+</script>

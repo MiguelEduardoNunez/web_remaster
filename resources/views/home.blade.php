@@ -7,7 +7,6 @@
     <title>Home</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Muli:wght@400;700&display=swap">
-    <link rel="stylesheet" href="{{ asset('css/app.css') }}"> <!-- Ruta al CSS sin compilación -->
     {{-- <style>
         /* Estilos para el modal */
         .modal-body {
@@ -173,7 +172,6 @@
     <!-- Modal Habeas Data -->
     <x-modal id="habeasDataModal" title="Habeas Data">
         <div class="modal-body">
-            <h3>HABEAS DATA</h3>
 
             <p>Por medio de la presente realizo la siguiente acción con mis datos personales:</p>
             <blockquote class="blockquote">
@@ -205,7 +203,7 @@
 
     <!-- Modal Centrales de Riesgo -->
     <x-modal id="centralRiesgoModal" title="Actualización o Retiro de Centrales de Riesgo">
-        <div class="modal-body border border-danger">
+        <div class="modal-body">
             <p>Infórmate sobre <strong>ACTUALIZACIÓN O RETIRO DE CENTRALES DE RIESGO</strong> aquí:</p>
             <blockquote class="blockquote">
                 <p class="mb-0">
@@ -356,6 +354,59 @@
             </ul>
         </div>
     </x-modal>
+
+
+    <!-- Modal -->
+    <div class="modal fade" id="mediaModal" tabindex="-1" aria-labelledby="mediaModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="mediaModalLabel">Noticias</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <!-- Imágenes -->
+                        <div class="col-12 col-md-6">
+                            <img src="{{ asset('images/noticia_1.jpeg') }}" class="img-fluid mb-3 rounded" style="box-shadow: 0 0 10px rgba(1, 1, 1, 0.5);" alt="">
+                            <img src="{{ asset('images/noticia_2.jpeg') }}" class="img-fluid mb-3 rounded" style="box-shadow: 0 0 10px rgba(1, 1, 1, 0.5);" alt="">
+                        </div>
+                        <div class="col-12 col-md-6">
+                            <img src="{{ asset('images/noticia_3.jpeg') }}" class="img-fluid mb-3 rounded" style="box-shadow: 0 0 10px rgba(1, 1, 1, 0.5);" alt="">
+                            <img src="{{ asset('images/noticia_4.jpeg') }}" class="img-fluid mb-3 rounded" style="box-shadow: 0 0 10px rgba(1, 1, 1, 0.5);" alt="">
+                            <video class="img-fluid" autoplay loop muted>
+                                <source src="{{ asset('media/prueba.mp4') }}" type="video/mp4">
+                                Tu navegador no soporta el elemento de video.
+                            </video>
+
+                        </div>
+                    </div>
+                    <div class="my-3">
+                        <!-- Video -->
+                        <h5>Escanear canales de television</h5>
+                        <video class="img-fluid" controls>
+                            <source src="{{ asset('media/video_1.mp4') }}" type="video/mp4">
+                            Tu navegador no soporta el elemento de video.
+                        </video>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var myModal = new bootstrap.Modal(document.getElementById('mediaModal'), {
+                keyboard: false
+            });
+            myModal.show();
+        });
+
+    </script>
 
     <!-- Bootstrap 5.3 -->
     <!-- Bootstrap JavaScript dependencies -->

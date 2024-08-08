@@ -20,8 +20,8 @@ Route::get('/', function () {
 Route::get('/nosotros', function () {
     return view('nosotros');
 });
-Route::get('/formularioPqrs', function () {
-    return view('formularioPqrs');
+Route::get('/formulario-pqrs', function () {
+    return view('formulariopqrs');
 })->name('formulario.pqrs');
 
 Route::post('/enviar-pqrs', [FormularioPQRSController::class, 'enviarPQRS'])->name('enviar.pqrs');
