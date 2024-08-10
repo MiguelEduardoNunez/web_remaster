@@ -114,7 +114,7 @@
                 </a>
             </div>
             <div class="carousel-item">
-                <img src="{{ asset('images/publicidad1.jpeg') }}" class="d-block w-100" alt="Slide 4">
+                <img src="{{ asset('images/carrusel_4.jpeg') }}" class="d-block w-100" alt="Slide 4">
             </div>
         </div>
         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">

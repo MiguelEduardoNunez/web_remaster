@@ -102,6 +102,7 @@
         </section>
     </main>
     <x-footer />
+    <x-modals />
 
     <script>
         document.addEventListener('DOMContentLoaded', function() {
@@ -110,7 +111,6 @@
             });
             myModal.show();
         });
-
     </script>
 
     <!-- Bootstrap 5.3 -->

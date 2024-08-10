@@ -134,7 +134,7 @@
                         <div class="card-body">
                             <h5 class="card-title">Atención PQR</h5>
                             <p class="card-text">Háganos sus peticiones quejas o reclamos</p>
-                            <a href="/formularioPqrs" class="btn text-white btn-primary-custom" role="button">Realizar PQRS</a>
+                            <a href="/formulario-pqrs" class="btn text-white btn-primary-custom" role="button">Realizar PQRS</a>
                         </div>
                     </div>
                 </div>

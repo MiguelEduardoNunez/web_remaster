@@ -1,35 +1,30 @@
 <style>
     .dropdown-menu {
+        /* Ajustes generales del menu */
         min-width: 305px;
-        /* Ancho mínimo del menu*/
         max-width: 400px;
-        /* Ancho máximo del menu*/
-        width: auto;
-        /*Para que el menú se ajuste automáticamente */
-    }
-    
+=        width: auto;
+=    }
+
 
     .dropdown-menu a {
+        /* Ajustes generales de los enlaces */
         white-space: normal;
-        /* Divide el texto en varias líneas si es necesario */
         word-wrap: break-word;
-        /* Ajusta las palabras largas */
         overflow: hidden;
     }
 
     .dropdown-menu li a:hover {
-        background-color: #004899;
         /* Color de fondo al pasar el puntero del mause */
+        background-color: #004899;
         color: white;
-        /* Color de la letra al pasar el puntero del mause */
     }
 
     .dropdown-menu li a {
+        /* Ajustes generales de los enlaces */
         display: block;
         padding: 5px 10px;
-        /* Ajusta el padding según sea necesario */
         border-radius: 5px;
-        /* Bordes redondeados */
     }
 
     /* Ajustes específicos para pantallas grandes */

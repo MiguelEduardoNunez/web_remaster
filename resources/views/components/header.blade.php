@@ -47,7 +47,7 @@
             </a>
         </div>
         <div class="d-flex align-items-center">
-            <a class="navbar-brand d-flex align-items-center" href="https://wa.me/+573183309330">
+            <a class="navbar-brand d-flex align-items-center" href="https://wa.me/+573183309330" target="blank">
                 <span class="text-white me-2">Comunicate en:</span>
                 <img src="{{ asset('images/whatsapp_icon.png') }}" alt="WhatsApp Icon" width="20" height="20">
             </a>

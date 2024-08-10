@@ -89,6 +89,15 @@
                                         <input class="form-control" type="text" name="nombre" placeholder="Nombres y Apellidos Completos*" required="">
                                     </div>
                                     <div class="form-group">
+                                        <select class="form-control" name="tipo_documento">
+                                            <option class="hidden" selected disabled>Tipo de documento*</option>
+                                            <option>Cédula de ciudadanía</option>
+                                            <option>Cédula Extranjera</option>
+                                            <option>NIT</option>
+                                            <option>Pasaporte</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
                                         <input type="tel" placeholder="Número de documento*" name="numero_cc" class="form-control">
                                     </div>
                                     <div class="form-group">
@@ -128,15 +137,6 @@
                                         <textarea name="hechos_text_area" placeholder="Hechos en los cuales se fundamenta su PQR*" required="" class="form-control"></textarea>
                                     </div>
                                     <div class="form-group">
-                                        <select class="form-control" name="tipo_documento">
-                                            <option class="hidden" selected disabled>Tipo de documento*</option>
-                                            <option>Cédula de ciudadanía</option>
-                                            <option>Cédula Extranjera</option>
-                                            <option>NIT</option>
-                                            <option>Pasaporte</option>
-                                        </select>
-                                    </div>
-                                    <div class="form-group">
                                         <select class="form-control" name="departamento">
                                             <option class="hidden" selected disabled>Departamento*</option>
                                             <option>Cauca</option>
@@ -167,7 +167,8 @@
         </section>
     </main>
     <x-footer />
-
+    <x-modals />
+    
     <!-- Modal -->
     @if(session('status'))
     <div class="modal fade" id="statusModal" tabindex="-1" aria-labelledby="statusModalLabel" aria-hidden="true">
