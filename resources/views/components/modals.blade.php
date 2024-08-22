@@ -1,5 +1,5 @@
 <div>
-    <    <!-- Modal Dignidad Infantil -->
+    <!-- Modal Dignidad Infantil -->
     <x-modal id="dignidadInfantilModal" title="Dignidad Infantil">
         <div class="modal-body" style="overflow-x: auto;">
             <ul class="list-unstyled">

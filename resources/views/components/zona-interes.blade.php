@@ -81,7 +81,7 @@
         <div class="col-lg-3 col-md-6 col-sm-12">
             <div class="interest-card">
                 <a href="https://www.sic.gov.co/" target="_blank">
-                    <img src="{{ asset('/images/comision_comunicacion.jpg') }}" alt="Superintendencia de Industria y Comercio (SIC)" class="img-fluid">
+                    <img src="{{ asset('/images/comision_comunicacion.webp') }}" alt="Superintendencia de Industria y Comercio (SIC)" class="img-fluid">
                 </a>
                 <h5>Comisión de regulación de comunicaciones (Crc)</h5>
             </div>

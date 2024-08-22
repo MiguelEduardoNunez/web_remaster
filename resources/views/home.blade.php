@@ -30,6 +30,10 @@
                 <div class="modal-body">
                     <div class="row">
                         <!-- Imágenes -->
+                        <div class="col-12 mb-3">
+                            <video src="{{ asset('media/noticia_vid.mp4') }}" class="d-block w-100" alt="Slide 4" autoplay loop muted >
+                        </div>
+                        </video>
                         <div class="col-12 col-md-6">
                             <img src="{{ asset('images/noticia_1.jpeg') }}" class="img-fluid mb-3 rounded" style="box-shadow: 0 0 10px rgba(1, 1, 1, 0.5);" alt="">
                             <img src="{{ asset('images/noticia_2.jpeg') }}" class="img-fluid mb-3 rounded" style="box-shadow: 0 0 10px rgba(1, 1, 1, 0.5);" alt="">
@@ -38,7 +42,7 @@
                             <img src="{{ asset('images/noticia_3.jpeg') }}" class="img-fluid mb-3 rounded" style="box-shadow: 0 0 10px rgba(1, 1, 1, 0.5);" alt="">
                             <img src="{{ asset('images/noticia_4.jpeg') }}" class="img-fluid mb-3 rounded" style="box-shadow: 0 0 10px rgba(1, 1, 1, 0.5);" alt="">
                             <video class="img-fluid" autoplay loop muted>
-                                <source src="{{ asset('media/prueba.mp4') }}" type="video/mp4">
+                                <source src="{{ asset('media/ipv6.mp4') }}" type="video/mp4">
                                 Tu navegador no soporta el elemento de video.
                             </video>
 
@@ -48,7 +52,7 @@
                         <!-- Video -->
                         <h5>Escanear canales de television</h5>
                         <video class="img-fluid" controls>
-                            <source src="{{ asset('media/video_1.mp4') }}" type="video/mp4">
+                            <source src="{{ asset('media/busqueda_canales.mp4') }}" type="video/mp4">
                             Tu navegador no soporta el elemento de video.
                         </video>
                     </div>
@@ -67,6 +71,7 @@
             });
             myModal.show();
         });
+
     </script>
 
     <!-- Bootstrap 5.3 -->
