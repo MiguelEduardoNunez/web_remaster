@@ -79,86 +79,89 @@
 
             <section class="contact_section">
                 <div class="container">
-                    <div id="contact_section" class="card-form">
-                        <form action="{{ route('enviar.pqrs') }}" method="post">
-                            @csrf
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <h3 class="subrayado">Información personal</h3>
+                    <div id="contact_section" class="shadows fonts heading_main heading_style_1 w-100 flex-column p-5">
+                        <form action="enviar_correo.php" method="post">
+                            <div class="card-form">
+                                <div class="form1">
+                                    <h3 class="subrayado">Información personal</h3><br>
                                     <div class="form-group">
-                                        <input class="form-control" type="text" name="nombre" placeholder="Nombres y Apellidos Completos*" required="">
-                                    </div>
+                                        <input class="bordes shadows form-control" type="text" name="nombre" placeholder="Nombres y Apellidos Completos*" required="">
+                                    </div><br>
                                     <div class="form-group">
-                                        <select class="form-control" name="tipo_documento">
-                                            <option class="hidden" selected disabled>Tipo de documento*</option>
-                                            <option>Cédula de ciudadanía</option>
-                                            <option>Cédula Extranjera</option>
-                                            <option>NIT</option>
-                                            <option>Pasaporte</option>
-                                        </select>
-                                    </div>
-                                    <div class="form-group">
-                                        <input type="tel" placeholder="Número de documento*" name="numero_cc" class="form-control">
-                                    </div>
+                                        <input type="tel" placeholder="Número de documento*" name="numero-cc" class="form-control">
+                                    </div><br>
                                     <div class="form-group">
                                         <input class="form-control" type="email" name="correo" placeholder="Email de contacto*" required="">
-                                    </div>
+                                    </div><br>
                                     <div class="form-group">
                                         <input class="form-control" type="tel" name="tel" placeholder="Número de Teléfono de contacto">
-                                    </div>
+                                    </div><br>
                                     <div class="form-group">
                                         <textarea class="form-control" name="mensaje" placeholder="Mensaje" required=""></textarea>
-                                    </div>
+                                    </div><br>
                                 </div>
-                                <div class="col-md-6">
-                                    <h3 class="subrayado">Información de la PQRS</h3>
-                                    <div class="form-group">
-                                        <select class="form-control" name="selec_pqrs">
-                                            <option class="hidden" selected disabled>Trámite a presentar*</option>
-                                            <option>Petición</option>
-                                            <option>Queja/Reclamo</option>
-                                            <option>Recurso</option>
-                                        </select>
-                                    </div>
-                                    <div class="form-group">
-                                        <select class="form-control" name="objeto_pqrs">
-                                            <option class="hidden" selected disabled>Objeto de la PQR*</option>
-                                            <option>Información</option>
-                                            <option>Cambio de domicilio</option>
-                                            <option>Cambio de suscriptor</option>
-                                            <option>Cobertura</option>
-                                            <option>Facturación</option>
-                                            <option>Retiros de Productos/servicios</option>
-                                            <option>Fallas técnicas</option>
-                                            <option>Daños en las instalaciones</option>
-                                        </select>
-                                    </div>
-                                    <div class="form-group">
-                                        <textarea name="hechos_text_area" placeholder="Hechos en los cuales se fundamenta su PQR*" required="" class="form-control"></textarea>
-                                    </div>
-                                    <div class="form-group">
-                                        <select class="form-control" name="departamento">
-                                            <option class="hidden" selected disabled>Departamento*</option>
-                                            <option>Cauca</option>
-                                        </select>
-                                    </div>
-                                    <div class="form-group">
-                                        <select class="form-control" name="ciudad">
-                                            <option class="hidden" selected disabled>Ciudad*</option>
-                                            <option>Popayán</option>
-                                            <option>Guapi</option>
-                                            <option>La Vega</option>
-                                            <option>Silvia</option>
-                                            <option>Inzá</option>
-                                        </select>
-                                    </div>
-                                    <div class="form-group">
-                                        <input type="text" placeholder="Dirección" required="" name="direccion" class="form-control">
-                                    </div>
+                                <div class="form2">
+                                    <h3 class="subrayado">Información de la PQRS</h3><br>
+                                    <fieldset>
+                                        <div class="form-group">
+                                            <select class="form-control" name="selec-pqrs">
+                                                <option class="hidden" selected disabled>Trámite a presentar*</option>
+                                                <option>Petición</option>
+                                                <option>Queja/Reclamo</option>
+                                                <option>Recurso</option>
+                                            </select>
+                                        </div> <br>
+                                        <div class="form-group">
+                                            <select class="form-control" name="objeto-pqrs">
+                                                <option class="hidden" selected disabled>Objeto de la PQR*</option>
+                                                <option>Información</option>
+                                                <option>Cambio de domicilio</option>
+                                                <option>Cambio de suscriptor</option>
+                                                <option>Cobertura</option>
+                                                <option>Facturación</option>
+                                                <option>Retiros de Productos/servicios</option>
+                                                <option>Fallas técnicas</option>
+                                                <option>Daños en las instalaciones</option>
+                                            </select>
+                                        </div><br>
+                                        <div class="form-group">
+                                            <textarea name="hechos-text-area" placeholder="Hechos en los cuales se fundamenta su PQR*" required=""></textarea>
+                                        </div><br>
+                                        <div class="form-group">
+                                            <select class="form-control" name="tipo_documento">
+                                                <option class="hidden" selected disabled>Tipo de documento*</option>
+                                                <option>Cédula de ciudadanía</option>
+                                                <option>Cédula Extranjera</option>
+                                                <option>NIT</option>
+                                                <option>Pasaporte</option>
+                                            </select>
+                                        </div><br>
+                                        <div class="form-group">
+                                            <select class="form-control" name="departamento">
+                                                <option class="hidden" selected disabled>Departamento*</option>
+                                                <option>Cauca</option>
+                                            </select>
+                                        </div> <br>
+                                        <div class="form-group">
+                                            <select class="form-control" name="ciudad">
+                                                <option class="hidden" selected disabled>Ciudad*</option>
+                                                <option>Popayán</option>
+                                                <option>Guapi</option>
+                                                <option>La Vega</option>
+                                                <option>Silvia</option>
+                                                <option>Inzá</option>
+                                            </select>
+                                        </div><br>
+                                        <div class="form-group">
+                                            <input type="text" placeholder="Dirección" required="" name="direccion" class="form-control">
+                                        </div><br>
+            
+                                    </fieldset>
+            
                                 </div>
-                            </div>
-                            <div class="text-center mt-4">
-                                <button name="btn" class="btn btn-primary">Enviar</button>
+                                <div class="boton_enviar w-100">
+                                    <button name="btn" class="btn btn-primary">Enviar</button>
+                                </div>
                             </div>
                         </form>
                     </div>
