@@ -7,8 +7,9 @@ use Illuminate\Support\Facades\Mail;
 
 class FormularioPQRSController extends Controller
 {
-    public function enviarPQRS(Request $request)
+    public function enviarpqrs(Request $request)
     {
+        dd($request->all());
         $request->validate([
             'nombre' => 'required',
             'numero_cc' => 'required',

@@ -24,5 +24,5 @@ Route::get('/formulario-pqrs', function () {
     return view('formulariopqrs');
 })->name('formulario.pqrs');
 
-Route::post('/enviar-pqrs', [FormularioPQRSController::class, 'enviarPQRS'])->name('enviar.pqrs');
+Route::post('/enviar-pqrs', [FormularioPQRSController::class, 'enviarpqrs'])->name('enviar.pqrs');
 

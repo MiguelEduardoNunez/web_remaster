@@ -55,6 +55,7 @@
         .form-group textarea {
             min-height: 100px;
         }
+
     </style>
 </head>
 
@@ -62,14 +63,14 @@
     <x-header />
     <x-menu />
     <main>
-        <section class="content-section">
+        <section class="content-section ">
             <div class="breadcumb-area">
                 <div class="container">
                     <div class="row">
                         <div class="col-12">
                             <div class="breadcumb-inner text-center text-white p-4" style="background: #111A3A">
                                 <h1>Formulario PQRS</h1>
-                                <h3>Deja tus peticiones, quejas y reclamos en nuestras manos</h3>
+                                <h3>Deja tus peticiones quejas y reclamos en nuestras manos</h3>
                             </div>
                         </div>
                     </div>
@@ -85,12 +86,10 @@
                                 <div class="col-md-6">
                                     <h3 class="subrayado">Información personal</h3>
                                     <div class="form-group">
-                                        <label for="nombre">Nombres y Apellidos Completos*</label>
-                                        <input id="nombre" class="form-control" type="text" name="nombre" placeholder="Nombres y Apellidos Completos*" required>
+                                        <input class="form-control" type="text" name="nombre" placeholder="Nombres y Apellidos Completos*" required="">
                                     </div>
                                     <div class="form-group">
-                                        <label for="tipo_documento">Tipo de documento*</label>
-                                        <select id="tipo_documento" class="form-control" name="tipo_documento" required>
+                                        <select class="form-control" name="tipo_documento">
                                             <option class="hidden" selected disabled>Tipo de documento*</option>
                                             <option>Cédula de ciudadanía</option>
                                             <option>Cédula Extranjera</option>
@@ -99,27 +98,22 @@
                                         </select>
                                     </div>
                                     <div class="form-group">
-                                        <label for="numero_cc">Número de documento*</label>
-                                        <input id="numero_cc" type="tel" placeholder="Número de documento*" name="numero_cc" class="form-control" required>
+                                        <input type="tel" placeholder="Número de documento*" name="numero_cc" class="form-control">
                                     </div>
                                     <div class="form-group">
-                                        <label for="correo">Email de contacto*</label>
-                                        <input id="correo" class="form-control" type="email" name="correo" placeholder="Email de contacto*" required>
+                                        <input class="form-control" type="email" name="correo" placeholder="Email de contacto*" required="">
                                     </div>
                                     <div class="form-group">
-                                        <label for="tel">Número de Teléfono de contacto</label>
-                                        <input id="tel" class="form-control" type="tel" name="tel" placeholder="Número de Teléfono de contacto">
+                                        <input class="form-control" type="tel" name="tel" placeholder="Número de Teléfono de contacto">
                                     </div>
                                     <div class="form-group">
-                                        <label for="mensaje">Mensaje</label>
-                                        <textarea id="mensaje" class="form-control" name="mensaje" placeholder="Mensaje" required></textarea>
+                                        <textarea class="form-control" name="mensaje" placeholder="Mensaje" required=""></textarea>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <h3 class="subrayado">Información de la PQRS</h3>
                                     <div class="form-group">
-                                        <label for="selec_pqrs">Trámite a presentar*</label>
-                                        <select id="selec_pqrs" class="form-control" name="selec_pqrs" required>
+                                        <select class="form-control" name="selec_pqrs">
                                             <option class="hidden" selected disabled>Trámite a presentar*</option>
                                             <option>Petición</option>
                                             <option>Queja/Reclamo</option>
@@ -127,8 +121,7 @@
                                         </select>
                                     </div>
                                     <div class="form-group">
-                                        <label for="objeto_pqrs">Objeto de la PQR*</label>
-                                        <select id="objeto_pqrs" class="form-control" name="objeto_pqrs" required>
+                                        <select class="form-control" name="objeto_pqrs">
                                             <option class="hidden" selected disabled>Objeto de la PQR*</option>
                                             <option>Información</option>
                                             <option>Cambio de domicilio</option>
@@ -141,19 +134,16 @@
                                         </select>
                                     </div>
                                     <div class="form-group">
-                                        <label for="hechos_text_area">Hechos en los cuales se fundamenta su PQR*</label>
-                                        <textarea id="hechos_text_area" name="hechos_text_area" placeholder="Hechos en los cuales se fundamenta su PQR*" required class="form-control"></textarea>
+                                        <textarea name="hechos_text_area" placeholder="Hechos en los cuales se fundamenta su PQR*" required="" class="form-control"></textarea>
                                     </div>
                                     <div class="form-group">
-                                        <label for="departamento">Departamento*</label>
-                                        <select id="departamento" class="form-control" name="departamento" required>
+                                        <select class="form-control" name="departamento">
                                             <option class="hidden" selected disabled>Departamento*</option>
                                             <option>Cauca</option>
                                         </select>
                                     </div>
                                     <div class="form-group">
-                                        <label for="ciudad">Ciudad*</label>
-                                        <select id="ciudad" class="form-control" name="ciudad" required>
+                                        <select class="form-control" name="ciudad">
                                             <option class="hidden" selected disabled>Ciudad*</option>
                                             <option>Popayán</option>
                                             <option>Guapi</option>
@@ -163,13 +153,12 @@
                                         </select>
                                     </div>
                                     <div class="form-group">
-                                        <label for="direccion">Dirección</label>
-                                        <input id="direccion" type="text" placeholder="Dirección" name="direccion" class="form-control" required>
+                                        <input type="text" placeholder="Dirección" required="" name="direccion" class="form-control">
                                     </div>
                                 </div>
                             </div>
                             <div class="text-center mt-4">
-                                <button type="submit" name="btn" class="btn btn-primary">Enviar</button>
+                                <button name="btn" class="btn btn-primary">Enviar</button>
                             </div>
                         </form>
                     </div>
@@ -179,7 +168,7 @@
     </main>
     <x-footer />
     <x-modals />
-
+    
     <!-- Modal -->
     @if(session('status'))
     <div class="modal fade" id="statusModal" tabindex="-1" aria-labelledby="statusModalLabel" aria-hidden="true">
@@ -210,6 +199,7 @@
             var statusModal = new bootstrap.Modal(document.getElementById('statusModal'));
             statusModal.show();
         });
+
     </script>
     @endif
 
@@ -217,6 +207,7 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"></script>
+
 </body>
 
 </html>
