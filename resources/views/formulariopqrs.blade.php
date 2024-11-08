@@ -55,6 +55,7 @@
         .form-group textarea {
             min-height: 100px;
         }
+
     </style>
 </head>
 
@@ -62,14 +63,14 @@
     <x-header />
     <x-menu />
     <main>
-        <section class="content-section">
+        <section class="content-section ">
             <div class="breadcumb-area">
                 <div class="container">
                     <div class="row">
                         <div class="col-12">
                             <div class="breadcumb-inner text-center text-white p-4" style="background: #111A3A">
                                 <h1>Formulario PQRS</h1>
-                                <h3>Deja tus peticiones, quejas y reclamos en nuestras manos</h3>
+                                <h3>Deja tus peticiones quejas y reclamos en nuestras manos</h3>
                             </div>
                         </div>
                     </div>
@@ -85,6 +86,7 @@
                                 <div class="col-md-6">
                                     <h3 class="subrayado">Información personal</h3>
                                     <div class="form-group">
+<<<<<<< HEAD
                                         <label for="nombre">Nombres y Apellidos Completos*</label>
                                         <input id="nombre" class="form-control" type="text" name="nombre"  value="{{ old('nombre') }}">
 					@if ($errors->has('nombre'))
@@ -99,12 +101,24 @@
                                             <option value="Cédula Extranjera" {{ old('tipo_documento') == 'Cédula Extranjera' ? 'selected' : '' }}>Cédula Extranjera</option>
                                             <option value="NIT" {{ old('tipo_documento') == 'NIT' ? 'selected' : '' }}>NIT</option>
                                             <option value="Pasaporte" {{ old('tipo_documento') == 'Pasaporte' ? 'selected' : '' }}>Pasaporte</option>
+=======
+                                        <input class="form-control" type="text" name="nombre" placeholder="Nombres y Apellidos Completos*" required="">
+                                    </div>
+                                    <div class="form-group">
+                                        <select class="form-control" name="tipo_documento">
+                                            <option class="hidden" selected disabled>Tipo de documento*</option>
+                                            <option>Cédula de ciudadanía</option>
+                                            <option>Cédula Extranjera</option>
+                                            <option>NIT</option>
+                                            <option>Pasaporte</option>
+>>>>>>> a3d6086c16bf8568aa48c89ef3989a2968fbd57c
                                         </select>
 				 	@if ($errors->has('numero_cc'))
                                                 <span class="text-danger">{{ $errors->first('tipo_documento') }}</span>
                                         @endif
                                     </div>
                                     <div class="form-group">
+<<<<<<< HEAD
                                         <label for="numero_cc">Número de documento*</label>
                                         <input id="numero_cc" type="tel" name="numero_cc" class="form-control" required value="{{ old('numero_cc') }}">
 					@if ($errors->has('numero_cc'))
@@ -131,11 +145,24 @@
 				        @if ($errors->has('mensaje'))
             					<span class="text-danger">{{ $errors->first('mensaje') }}</span>
         				@endif
+=======
+                                        <input type="tel" placeholder="Número de documento*" name="numero_cc" class="form-control">
+                                    </div>
+                                    <div class="form-group">
+                                        <input class="form-control" type="email" name="correo" placeholder="Email de contacto*" required="">
+                                    </div>
+                                    <div class="form-group">
+                                        <input class="form-control" type="tel" name="tel" placeholder="Número de Teléfono de contacto">
+                                    </div>
+                                    <div class="form-group">
+                                        <textarea class="form-control" name="mensaje" placeholder="Mensaje" required=""></textarea>
+>>>>>>> a3d6086c16bf8568aa48c89ef3989a2968fbd57c
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <h3 class="subrayado">Información de la PQRS</h3>
                                     <div class="form-group">
+<<<<<<< HEAD
                                         <label for="selec_pqrs">Trámite a presentar*</label>
                                         <select id="selec_pqrs" class="form-control" name="selec_pqrs" required>
                                             <option class="hidden" selected disabled>Seleccione una opción</option>
@@ -189,12 +216,55 @@
 				        @if ($errors->has('direccion'))
             					<span class="text-danger">{{ $errors->first('direccion') }}</span>
         				@endif
+=======
+                                        <select class="form-control" name="selec_pqrs">
+                                            <option class="hidden" selected disabled>Trámite a presentar*</option>
+                                            <option>Petición</option>
+                                            <option>Queja/Reclamo</option>
+                                            <option>Recurso</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <select class="form-control" name="objeto_pqrs">
+                                            <option class="hidden" selected disabled>Objeto de la PQR*</option>
+                                            <option>Información</option>
+                                            <option>Cambio de domicilio</option>
+                                            <option>Cambio de suscriptor</option>
+                                            <option>Cobertura</option>
+                                            <option>Facturación</option>
+                                            <option>Retiros de Productos/servicios</option>
+                                            <option>Fallas técnicas</option>
+                                            <option>Daños en las instalaciones</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <textarea name="hechos_text_area" placeholder="Hechos en los cuales se fundamenta su PQR*" required="" class="form-control"></textarea>
+                                    </div>
+                                    <div class="form-group">
+                                        <select class="form-control" name="departamento">
+                                            <option class="hidden" selected disabled>Departamento*</option>
+                                            <option>Cauca</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <select class="form-control" name="ciudad">
+                                            <option class="hidden" selected disabled>Ciudad*</option>
+                                            <option>Popayán</option>
+                                            <option>Guapi</option>
+                                            <option>La Vega</option>
+                                            <option>Silvia</option>
+                                            <option>Inzá</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="text" placeholder="Dirección" required="" name="direccion" class="form-control">
+>>>>>>> a3d6086c16bf8568aa48c89ef3989a2968fbd57c
                                     </div>
                                 </div>
                             </div>
 
                             <div class="text-center mt-4">
-                                <button type="submit" name="btn" class="btn btn-primary">Enviar</button>
+                                <button name="btn" class="btn btn-primary">Enviar</button>
                             </div>
                         </form>
                     </div>
@@ -204,7 +274,7 @@
     </main>
     <x-footer />
     <x-modals />
-
+    
     <!-- Modal -->
     @if(session('status'))
     <div class="modal fade" id="statusModal" tabindex="-1" aria-labelledby="statusModalLabel" aria-hidden="true">
@@ -235,6 +305,7 @@
             var statusModal = new bootstrap.Modal(document.getElementById('statusModal'));
             statusModal.show();
         });
+
     </script>
     @endif
 
@@ -242,6 +313,7 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"></script>
+
 </body>
 
 </html>

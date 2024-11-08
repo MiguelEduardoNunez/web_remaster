@@ -9,7 +9,6 @@ class FormularioPQRSController extends Controller
 {
     public function enviarpqrs(Request $request)
     {
-       // dd($request->all());
         $request->validate([
             'nombre' => 'required|string|min:10',
             'numero_cc' => 'required|numeric|min:5',
