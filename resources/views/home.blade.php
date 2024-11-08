@@ -30,33 +30,48 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <div class="row">
-                        <!-- Imágenes -->
-                        <div class="col-12 mb-3">
-                            <video src="{{ asset('media/noticia_vid.mp4') }}" class="d-block w-100" alt="Slide 4" autoplay loop muted >
+                    <div class="container">
+                        <div class="row g-3">
+                            <!-- Video Principal -->
+                            <div class="col-12">
+                                <video src="{{ asset('media/noticia_vid.mp4') }}" class="d-block w-100 rounded" autoplay loop muted></video>
+                            </div>
+                            <!-- Imágenes 1 y 2 en la misma fila -->
+                            <div class="col-6">
+                                <img src="{{ asset('images/infonavidad.jpeg') }}" class="img-fluid rounded shadow" alt="Info Navidad">
+                            </div>
+                            <div class="col-6">
+                                <img src="{{ asset('images/codigoqr.jpeg') }}" class="img-fluid rounded shadow" alt="Código QR">
+                            </div>
+                            <!-- Imágenes 3 y 4 en la misma fila -->
+                            <div class="col-6">
+                                <img src="{{ asset('images/noticia_1.jpeg') }}" class="img-fluid rounded shadow" alt="Noticia 1">
+                            </div>
+                            <div class="col-6">
+                                <img src="{{ asset('images/noticia_2.jpeg') }}" class="img-fluid rounded shadow" alt="Noticia 2">
+                            </div>
+                            <!-- Imágenes 5 y 6 + Video -->
+                            <div class="col-6">
+                                <img src="{{ asset('images/noticia_3.jpeg') }}" class="img-fluid rounded shadow" alt="Noticia 3">
+                            </div>
+                            <div class="col-6">
+                                <img src="{{ asset('images/noticia_4.jpeg') }}" class="img-fluid rounded shadow" alt="Noticia 4">
+                            </div>
+                            <div class="col-12">
+                                <video class="img-fluid rounded shadow" autoplay loop muted>
+                                    <source src="{{ asset('media/ipv6.mp4') }}" type="video/mp4">
+                                    Tu navegador no soporta el elemento de video.
+                                </video>
+                            </div>
+                            <!-- Video con controles -->
+                            <div class="col-12 mt-4">
+                                <h5>Escanear canales de televisión</h5>
+                                <video class="img-fluid rounded shadow" controls>
+                                    <source src="{{ asset('media/busqueda_canales.mp4') }}" type="video/mp4">
+                                    Tu navegador no soporta el elemento de video.
+                                </video>
+                            </div>
                         </div>
-                        </video>
-                        <div class="col-12 col-md-6">
-                            <img src="{{ asset('images/noticia_1.jpeg') }}" class="img-fluid mb-3 rounded" style="box-shadow: 0 0 10px rgba(1, 1, 1, 0.5);" alt="">
-                            <img src="{{ asset('images/noticia_2.jpeg') }}" class="img-fluid mb-3 rounded" style="box-shadow: 0 0 10px rgba(1, 1, 1, 0.5);" alt="">
-                        </div>
-                        <div class="col-12 col-md-6">
-                            <img src="{{ asset('images/noticia_3.jpeg') }}" class="img-fluid mb-3 rounded" style="box-shadow: 0 0 10px rgba(1, 1, 1, 0.5);" alt="">
-                            <img src="{{ asset('images/noticia_4.jpeg') }}" class="img-fluid mb-3 rounded" style="box-shadow: 0 0 10px rgba(1, 1, 1, 0.5);" alt="">
-                            <video class="img-fluid" autoplay loop muted>
-                                <source src="{{ asset('media/ipv6.mp4') }}" type="video/mp4">
-                                Tu navegador no soporta el elemento de video.
-                            </video>
-
-                        </div>
-                    </div>
-                    <div class="my-3">
-                        <!-- Video -->
-                        <h5>Escanear canales de television</h5>
-                        <video class="img-fluid" controls>
-                            <source src="{{ asset('media/busqueda_canales.mp4') }}" type="video/mp4">
-                            Tu navegador no soporta el elemento de video.
-                        </video>
                     </div>
                 </div>
                 <div class="modal-footer">

@@ -94,7 +94,7 @@
                     <div class="card-back">
                         <div class="card-body">
                             <h5 class="card-title">Pagos inteligentes</h5>
-                            <p class="card-text">Paga tus facturas por medios electrónicos como PSE</p>
+                            <p class="card-text">Paga tus facturas por medios electrónicos como PSE</p> 
                             <a href="https://www.psepagos.co/PSEHostingUI/ShowTicketOffice.aspx?ID=6553" class="btn text-white btn-primary-custom" role="button" target="_blank">Ir a PSE</a>
                         </div>
                     </div>
@@ -113,9 +113,9 @@
                     <div class="card-back">
                         <div class="card-body d-flex flex-column align-items-center">
                             <h5 class="card-title mb-3">Soporte Técnico</h5>
-                            <a href="https://api.whatsapp.com/send?phone=573174327901" class="btn w-50 mb-2 text-white btn-primary-custom" role="button" target="_blank">Nivel 1 Popayán</a>
-                            <a href="https://api.whatsapp.com/send?phone=573174274601" class="btn w-50 mb-2 text-white btn-primary-custom" role="button" target="_blank">Nivel 1 Guapi</a>
-                            <a href="https://api.whatsapp.com/send?phone=573162697428" class="btn w-50 text-white btn-primary-custom" role="button" target="_blank">Nivel 2</a>
+                            <a href="https://api.whatsapp.com/send?phone=573174327901" class="btn w-50 mb-2 text-white btn-primary-custom" role="button" target="_blank">Nivel I Popayán</a>
+                            <a href="https://api.whatsapp.com/send?phone=573174274601" class="btn w-50 mb-2 text-white btn-primary-custom" role="button" target="_blank">Nivel I Guapi</a>
+                            <a href="https://api.whatsapp.com/send?phone=573162697428" class="btn w-50 text-white btn-primary-custom" role="button" target="_blank">Nivel II NOC</a>
                         </div>
                     </div>
                 </div>

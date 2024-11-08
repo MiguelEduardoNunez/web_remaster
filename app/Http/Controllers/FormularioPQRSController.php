@@ -7,17 +7,18 @@ use Illuminate\Support\Facades\Mail;
 
 class FormularioPQRSController extends Controller
 {
-    public function enviarPQRS(Request $request)
+    public function enviarpqrs(Request $request)
     {
+       // dd($request->all());
         $request->validate([
-            'nombre' => 'required',
-            'numero_cc' => 'required',
+            'nombre' => 'required|string|min:10',
+            'numero_cc' => 'required|numeric|min:5',
             'correo' => 'required|email',
             'tel' => 'required',
-            'mensaje' => 'required',
+            'mensaje' => 'required|string|min:10',
             'selec_pqrs' => 'required',
             'objeto_pqrs' => 'required',
-            'hechos_text_area' => 'required',
+            'hechos' => 'required|string|min:20',
             'tipo_documento' => 'required',
             'departamento' => 'required',
             'ciudad' => 'required',
@@ -25,7 +26,7 @@ class FormularioPQRSController extends Controller
         ]);
         try {
             $data = $request->all();
-            $recipients = ['castillomigueleduardo64@gmail.com'];
+            $recipients = ['castillomigueleduardo64@gmail.com', 'noc@sepcom.com.co', 'info@sepcom.com.co', 'sst@sepcom.com.co'];
             foreach ($recipients as $recipient) {
                 Mail::send('enviarpqrs', $data, function ($message) use ($recipient) {
                     $message->to($recipient)
@@ -38,7 +39,7 @@ class FormularioPQRSController extends Controller
         } catch (\Exception $e) {
             // Mensaje de error
             $status = 'error';
-            $message = 'No se pudo enviar el correo. Inténtalo de nuevo más tarde.';
+            $message = 'No se pudo enviar el correo. Intentelo de nuevo mas tarde.';
         }
 
         return redirect()->route('formulario.pqrs')->with('status', $status)->with('message', $message);
