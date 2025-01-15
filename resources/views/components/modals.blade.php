@@ -138,7 +138,6 @@
         </div>
     </x-modal>
 
-
     <!-- Modal Habeas Data -->
     <x-modal id="habeasDataModal" title="Habeas Data">
         <div class="modal-body">
@@ -296,7 +295,7 @@
                 <li>Soporte técnico: Nivel 1 Popayán 317 4327901 - Nivel 2 Guapi 3174274601 - Nivel 2 316 2697428</li>
                 <li>Línea gratuita: 01 8000 189 098</li>
                 <li>Facturación: 317 5014960</li>
-                <li>Área comercial: 317 3708201</li>
+                <li>Área comercial: 317 3708201-318 3309330</li>
             </ul>
         </div>
     </x-modal>
@@ -324,6 +323,4 @@
             </ul>
         </div>
     </x-modal>
-
-    
 </div>

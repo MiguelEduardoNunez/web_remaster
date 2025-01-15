@@ -1,5 +1,5 @@
 <style>
-    /* Tamaño del contenedor del carrusel */
+    /* Tama�o del contenedor del carrusel */
     .carousel-container {
         width: 100%;
         display: flex;
@@ -8,19 +8,19 @@
         padding-top: 10px;
     }
 
-    /* Tamaño del carrusel */
+    /* Tama�o del carrusel */
     .carousel {
         width: 100%;
     }
 
-    /* Tamaño de las imágenes */
+    /* Tama�o de las im�genes */
     .carousel-item {
         width: 100%;
         height: 100%;
         object-fit: cover;
     }
 
-    /* Estilos del ícono de reproducción */
+    /* Estilos del �cono de reproducci�n */
     .play-icon {
         position: absolute;
         top: 60%;
@@ -31,7 +31,7 @@
         z-index: 10;
     }
 
-    /* Contenedor del ícono de reproducción */
+    /* Contenedor del �cono de reproducci�n */
     .padre-play {
         position: absolute;
         top: 0;
@@ -61,7 +61,7 @@
         animation-delay: 0.75s;
     }
 
-    /* Animación de ondas */
+    /* Animaci�n de ondas */
     @keyframes ripple {
         0% {
             transform: translate(-50%, -50%) scale(0.8);
@@ -74,7 +74,7 @@
         }
     }
 
-    /* Ajuste de tamaño */
+    /* Ajuste de tama�o */
     @media (min-width: 576px) {
         .carousel {
             width: 100%;
@@ -102,12 +102,12 @@
     <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000" data-bs-wrap="true">
         <div class="carousel-inner">
             <div class="carousel-item active">
-                <img src="{{ asset('images/carrousel_1.png') }}" class="d-block w-100" alt="Slide 1">
+                <img src="{{ asset('images/carrusel_1.jpg') }}" class="d-block w-100" alt="Slide 1">
             </div>
-            <div class="carousel-item">
+            {{-- <div class="carousel-item">
                 <img src="{{ asset('images/carrousel_2.png') }}" class="d-block w-100" alt="Slide 2">
-            </div>
-            <div class="carousel-item">
+           </div>--}}
+           <div class="carousel-item">
                 <img src="{{ asset('images/carrousel_3.png') }}" class="d-block w-100" alt="Slide 3">
                 <a href="#" class="padre-play" data-bs-toggle="modal" data-bs-target="#videoGrooming">
                     <img src="{{ asset('images/play_icon.png') }}" class="play-icon" alt="Play icon">
@@ -143,6 +143,11 @@
         </div>
     </div>
 </div>
+{{-- <div class="d-flex justify-content-center align-items-center mt-5">
+    <img src="{{ asset('images/planes_escalofriantes.jpeg') }}" class="rounded-3 mr-3 flex-shrink-0" alt="Slide 2" style="width: 20%; height: auto;">
+    <img src="{{ asset('images/hallowen_carusel.png') }}" class="rounded-3 mx-3" alt="Slide 2" style="width: 55%; height: auto;">
+    <img src="{{ asset('images/codigoqr.jpeg') }}" class="rounded-3 mr-3 flex-shrink-0" alt="Slide 2" style="width: 20%; height: auto;">
+</div> --}}
 <script>
     document.addEventListener('DOMContentLoaded', function() {
         var videoModal = document.getElementById('videoGrooming');
@@ -157,5 +162,4 @@
             videoIframe.src = "";
         });
     });
-
 </script>

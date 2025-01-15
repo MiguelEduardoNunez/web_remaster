@@ -3,15 +3,19 @@
         /* Ajustes generales del menu */
         min-width: 305px;
         max-width: 400px;
-=        width: auto;
-=    }
-
+        width: auto;
+    }
 
     .dropdown-menu a {
         /* Ajustes generales de los enlaces */
         white-space: normal;
         word-wrap: break-word;
         overflow: hidden;
+    }
+
+    .navbar-nav .nav-link.active {
+    font-weight: bold;
+    color: black !important;
     }
 
     .dropdown-menu li a:hover {
@@ -33,7 +37,6 @@
             font-size: 16px;
         }
     }
-
 </style>
 
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -88,3 +91,17 @@
         </div>
     </div>
 </nav>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+    const currentPath = window.location.pathname; // Obtiene la ruta actual
+    const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
+
+    navLinks.forEach(link => {
+        if (link.getAttribute('href') === currentPath) {
+            link.classList.add('active');
+        } else {
+            link.classList.remove('active');
+        }
+    });
+});
+</script>

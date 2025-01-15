@@ -43,7 +43,7 @@
             </a>
             <a class="navbar-brand d-flex align-items-center ms-4" href="tel: 01 8000 189 098">
                 <img src="{{ asset('images/phone_icon.png') }}" alt="Phone Icon" class="me-2" width="20" height="20">
-                <span class="d-none d-md-inline">(+123) 456-7890</span>
+                <span class="d-none d-md-inline">01 8000 189 098</span>
             </a>
         </div>
         <div class="d-flex align-items-center">

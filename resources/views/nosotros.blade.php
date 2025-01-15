@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -8,9 +7,9 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Muli:wght@400;700&display=swap">
+    <link rel="icon" href="{{ asset('images/favicon1.ico') }}" type="image/x-icon">
     <style>
         /* Estilos específicos para la vista Nosotros */
-
         .content-section {
             padding: 2rem 0;
         }
@@ -63,14 +62,13 @@
     <x-menu />
     <main>
         <section class="content-section">
-            
             <div class="container">
                 <h2>Conócenos</h2>
                 <div class="row mb-4">
                     <!-- Misión -->
                     <div class="col-md-8 col-12 order-md-1 order-2">
                         <h3>Misión</h3>
-                        <p>ColombiaNET Ingeniería y Telecomunicaciones es una empresa especializada en el desarrollo y ejecución de proyectos en telecomunicaciones, eléctricos, obras civiles y diferentes ramas de la ingeniería, contribuyendo a la competitividad de nuestros clientes.</p>
+                        <p>Colombianet Ingeniería y Telecomunicaciones es una empresa especializada en el desarrollo y ejecución de proyectos en telecomunicaciones, eléctricos, obras civiles y diferentes ramas de la ingeniería, contribuyendo a la competitividad de nuestros clientes.</p>
                     </div>
                     <div class="col-md-4 col-12 order-md-2 order-1">
                         <img src="{{ asset('images/img_mision.png') }}" alt="Misión">
@@ -84,7 +82,7 @@
                     </div>
                     <div class="col-md-8 col-12 order-md-2 order-2">
                         <h3>Visión</h3>
-                        <p>Consolidarse a 2025 como una empresa líder en la prestación de servicios, brindando soluciones de óptima calidad buscando la satisfacción del cliente, avanzando a la par con el progreso tecnológico.</p>
+                        <p>Consolidarse a 2027 como una empresa líder en la prestación de servicios, brindando soluciones de óptima calidad buscando la satisfacción del cliente, avanzando a la par con el progreso tecnológico.</p>
                     </div>
                 </div>
 
@@ -118,5 +116,4 @@
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"></script>
 </body>
-
 </html>

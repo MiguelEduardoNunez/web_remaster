@@ -1,140 +1,192 @@
 <style>
-    .container {
-        perspective: 1000px; /* Perspectiva para el efecto 3D */
-        margin-bottom: 20px
+    .custom-services-container {
+        background-color: #F1F1F1;
+        padding: 3rem 0;
+        margin: 2rem 0;
     }
 
-    .card {
-        height: 32vh; /* Ajusta la altura de la card */
-        border-radius: 8px;
-        overflow: hidden; /*el contenido no se sobresalga */
-        transition: transform 0.6s; /* Transición suave para el efecto 3D */
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Sombra a la tarjeta */
-        border: none; /* Quita el borde de la tarjeta */
+    .custom-service-card {
+        height: 250px; /* Altura ajustada */
+        perspective: 1000px;
+        /* margin-bottom: 2rem; */
     }
 
-    .card:hover .card-inner {
-        transform: rotateY(180deg); /* Rotación de 180 grados al pasar el ratón */
-    }
-
-    .card-inner {
+    .custom-service-card-inner {
         position: relative;
         width: 100%;
         height: 100%;
-        transition: transform 0.6s;
+        transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
         transform-style: preserve-3d;
+        border-radius: 24px;
     }
 
-    .card-front,
-    .card-back {
+    .custom-service-card-back .d-flex.flex-column {
+        gap: 0.3rem; /* Espaciado reducido entre los botones */
+    }
+
+    .custom-service-card:hover .custom-service-card-inner {
+        transform: rotateY(180deg);
+    }
+
+    .custom-service-card-front,
+    .custom-service-card-back {
         position: absolute;
         width: 100%;
         height: 100%;
-        backface-visibility: hidden; /* Oculta la parte trasera */
+        backface-visibility: hidden;
+        border-radius: 24px;
         display: flex;
+        flex-direction: column;
         align-items: center;
         justify-content: center;
+        padding: 1.5rem;
+        background-size: 400% 400%;
+        color: #FFFFFF;
+    }
+
+    .custom-service-card-front {
+        background-color: #EAB205;
+    }
+
+    .custom-service-card-back {
+        background-color: #0D4489;
+        transform: rotateY(180deg);
+    }
+
+    .custom-service-icon {
+        width: 80px; /* Tamaño más grande */
+        height: 80px;
+        margin-bottom: 0.5rem;
+        object-fit: contain;
+        transition: transform 0.3s ease;
+    }
+
+    .custom-service-card:hover .custom-service-icon {
+        transform: scale(1.1);
+    }
+
+    .custom-service-title {
+        font-size: 1.5rem;
+        font-weight: 600;
+        margin-bottom: 0.5rem;
+        text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+    }
+
+    .custom-service-text {
+        font-size: 0.85rem;
         text-align: center;
-        padding: 15px; /* Ajusta el espaciado interno */
+        margin-bottom: 0.5rem;
     }
 
-    .card-front {
-        background-color: #fff; /* Fondo blanco para la parte frontal */
+    .custom-service-button {
+        background: rgba(255, 255, 255, 0.15);
+        color: white;
+        border: 2px solid rgba(255, 255, 255, 0.3);
+        padding: 0.3rem 0.8rem;
+        border-radius: 50px;
+        font-weight: 500;
+        transition: all 0.3s ease;
+        backdrop-filter: blur(10px);
+        text-decoration: none;
+        margin: 0.3rem;
+        min-width: 120px;
+        text-align: center;
+        font-size: 0.9rem;
     }
 
-    .card-back {
-        background-color: #FCBF00; /* Fondo amarillo para la parte trasera */
-        color: #333; /* Color de texto para la parte trasera */
-        transform: rotateY(180deg); /* Rota la parte trasera para que esté detrás de la frontal */
+    .custom-service-button:hover {
+        background: rgba(255, 255, 255, 0.25);
+        transform: translateY(-2px);
+        color: white;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     }
 
-    .card-img-top {
-        width: 50%; /* Ajusta el tamaño de la imagen según tus necesidades */
-        margin: 0 auto; /* Centra la imagen */
-    }
-
-    .btn-primary-custom {
-        background-color: #004899; /* Color de fondo personalizado */
-        color: white; /* Color del texto de los botones */
-        transition: background-color 0.3s, color 0.3s; /* Transición para un efecto suave */
-    }
-
-    .btn-primary-custom:hover {
-        background-color: #003366; /* Color de fondo al hacer hover */
-        color: white; /* Color del texto al hacer hover */
-    }
-
-    @media (max-width: 767px) {
-        .card {
-            height: 27vh; /* Reduce la altura de la tarjeta en pantallas pequeñas */
+    @media (max-width: 768px) {
+        .custom-service-card {
+            height: 180px;
         }
 
-        .card-img-top {
-            width: 35%; /* Ajusta el tamaño de la imagen en pantallas pequeñas */
+        .custom-service-icon {
+            width: 70px;
+            height: 70px;
         }
 
-        .btn-primary-custom {
-            height: auto; /* Ajusta la altura del botón */
-            font-size: 14px; /* Tamaño de fuente del botón */
+        .custom-service-title {
+            font-size: 0.9rem;
+        }
+
+        .custom-service-button {
+            font-size: 0.8rem;
         }
     }
 </style>
 
-<div class="container mt-5">
-    <div class="row text-center">
-        <div class="col-12 col-md-6 col-lg-4 mb-4">
-            <div class="card">
-                <div class="card-inner">
-                    <div class="card-front">
-                        <img src="{{ asset('images/pse_icon.svg') }}" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">Paga tus facturas por PSE</h5>
+<div class="custom-services-container">
+    <div class="container">
+        <div class="row g-4">
+            <!-- Tarjeta PSE -->
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="custom-service-card">
+                    <div class="custom-service-card-inner">
+                        <div class="custom-service-card-front">
+                            <img src="{{ asset('images/pse_icon.svg') }}" class="custom-service-icon" alt="PSE">
+                            <h3 class="custom-service-title">Pago PSE</h3>
+                            <p class="custom-service-text">Realiza tus pagos de forma segura y rápida</p>
                         </div>
-                    </div>
-                    <div class="card-back">
-                        <div class="card-body">
-                            <h5 class="card-title">Pagos inteligentes</h5>
-                            <p class="card-text">Paga tus facturas por medios electrónicos como PSE</p>
-                            <a href="https://www.psepagos.co/PSEHostingUI/ShowTicketOffice.aspx?ID=6553" class="btn text-white btn-primary-custom" role="button" target="_blank">Ir a PSE</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col-12 col-md-6 col-lg-4 mb-4">
-            <div class="card">
-                <div class="card-inner">
-                    <div class="card-front">
-                        <img src="{{ asset('images/soporte_icon.png') }}" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">Soporte Técnico</h5>
-                        </div>
-                    </div>
-                    <div class="card-back">
-                        <div class="card-body d-flex flex-column align-items-center">
-                            <h5 class="card-title mb-3">Soporte Técnico</h5>
-                            <a href="https://api.whatsapp.com/send?phone=573174327901" class="btn w-50 mb-2 text-white btn-primary-custom" role="button" target="_blank">Nivel 1 Popayán</a>
-                            <a href="https://api.whatsapp.com/send?phone=573174274601" class="btn w-50 mb-2 text-white btn-primary-custom" role="button" target="_blank">Nivel 1 Guapi</a>
-                            <a href="https://api.whatsapp.com/send?phone=573162697428" class="btn w-50 text-white btn-primary-custom" role="button" target="_blank">Nivel 2</a>
+                        <div class="custom-service-card-back">
+                            <h3 class="custom-service-title">Pagos Seguros</h3>
+                            <p class="custom-service-text">Utiliza nuestra plataforma PSE para realizar tus pagos de forma segura y eficiente</p>
+                            <a href="https://www.psepagos.co/PSEHostingUI/ShowTicketOffice.aspx?ID=6553"
+                                class="custom-service-button" target="_blank">
+                                Pagar Ahora
+                            </a>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="col-12 col-lg-4 mb-4">
-            <div class="card">
-                <div class="card-inner">
-                    <div class="card-front">
-                        <img src="{{ asset('images/peticion_icon.png') }}" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">Atención PQR</h5>
+
+            <!-- Tarjeta Soporte -->
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="custom-service-card">
+                    <div class="custom-service-card-inner">
+                        <div class="custom-service-card-front">
+                            <img src="{{ asset('images/soporte_icon.png') }}" class="custom-service-icon" alt="Soporte">
+                            <h3 class="custom-service-title">Soporte Técnico</h3>
+                            <p class="custom-service-text">Asistencia profesional 24/7</p>
+                        </div>
+                        <div class="custom-service-card-back">
+                            <h3 class="custom-service-title">Canales de Soporte</h3>
+                            <div class="d-flex flex-column w-100">
+                                <a href="https://api.whatsapp.com/send?phone=573174327901" class="custom-service-button" target="_blank">
+                                    Nivel I Popayán
+                                </a>
+                                <a href="https://api.whatsapp.com/send?phone=573174274601" class="custom-service-button" target="_blank">
+                                    Nivel I Guapi
+                                </a>
+                                <a href="https://api.whatsapp.com/send?phone=573162697428" class="custom-service-button" target="_blank">
+                                    Nivel II NOC
+                                </a>
+                            </div>
                         </div>
                     </div>
-                    <div class="card-back">
-                        <div class="card-body">
-                            <h5 class="card-title">Atención PQR</h5>
-                            <p class="card-text">Háganos sus peticiones quejas o reclamos</p>
-                            <a href="/formulario-pqrs" class="btn text-white btn-primary-custom" role="button">Realizar PQRS</a>
+                </div>
+            </div>
+
+            <!-- Tarjeta PQR -->
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="custom-service-card">
+                    <div class="custom-service-card-inner">
+                        <div class="custom-service-card-front">
+                            <img src="{{ asset('images/peticion_icon.png') }}" class="custom-service-icon" alt="PQR">
+                            <h3 class="custom-service-title">Atención PQR</h3>
+                            <p class="custom-service-text">Gestiona tus solicitudes</p>
+                        </div>
+                        <div class="custom-service-card-back">
+                            <h3 class="custom-service-title">Sistema PQR</h3>
+                            <p class="custom-service-text">Realiza tus peticiones, quejas o reclamos de manera fácil y rápida</p>
+                            <a href="/formulario-pqrs" class="custom-service-button">
+                                Crear PQRS
+                            </a>
                         </div>
                     </div>
                 </div>

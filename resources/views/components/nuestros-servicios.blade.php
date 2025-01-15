@@ -1,242 +1,367 @@
 <style>
-    .container-servicios {
-        background-color: #eab205;
-        padding: 40px 30px 30px;
-        text-align: center;
-    }
-
-    .container-servicios h5,
-    .container-servicios h2 {
-        color: #fff;
-        margin-bottom: 20px;
-    }
-
-    .servicio-card {
-        height: 100%;
-        background-color: #eab205;
-        border-radius: 8px;
-        box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
-        margin-bottom: 20px;
-        transition: transform 0.6s;
-        transform-style: preserve-3d;
+    .services-section {
         position: relative;
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        overflow: hidden;
     }
 
-    .servicio-card:hover {
-        transform: rotateX(180deg);
+    @keyframes gradient-slide {
+        0% {
+            background-position: 100% 0;
+        }
+
+        100% {
+            background-position: -100% 0;
+        }
     }
 
-    .servicio-card-inner {
+    .services-header {
+        text-align: center;
+        margin-bottom: 1rem;
+        position: relative;
+    }
+
+    .services-header h1 {
+        color: #2d3748;
+        font-size: 2.5rem;
+        font-weight: 700;
+        margin-bottom: 1rem;
+        position: relative;
+        display: inline-block;
+    }
+
+    .services-header h3 {
+        color: #282b30;
+        font-size: 1.25rem;
+        font-weight: 400;
+        margin-bottom: 2rem;
+    }
+
+    .services-header h1::after {
+        content: '';
+        position: absolute;
+        bottom: -10px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 80px;
+        height: 4px;
+        background: linear-gradient(90deg, #EAB205, #004499);
+        border-radius: 2px;
+    }
+
+    .service-card {
+        height: 400px;
+        perspective: 2000px;
+        margin-bottom: 30px;
+    }
+
+    .service-card-inner {
         position: relative;
         width: 100%;
         height: 100%;
-        transition: transform 0.6s;
+        text-align: center;
+        transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
         transform-style: preserve-3d;
+        border-radius: 20px;
     }
 
-    .card-front-services,
-    .card-back-services {
+    .service-card:hover .service-card-inner {
+        transform: rotateY(180deg);
+    }
+
+    .card-front,
+    .card-back {
         position: absolute;
         width: 100%;
         height: 100%;
         backface-visibility: hidden;
+        border-radius: 20px;
+        overflow: hidden;
         display: flex;
+        flex-direction: column;
         align-items: center;
         justify-content: center;
-        flex-direction: column;
-        padding: 20px;
-        box-sizing: border-box;
+        padding: 2rem;
     }
 
-    .card-front-services {
-        background-color: #eab205;
-        border-radius: 8px;
-        border: 1px solid #504e4e;
-        z-index: 2;
+    .card-front {
+        /* background: linear-gradient(145deg, #ffffff, #f0f0f0); */
+        background-color: #EAB205;
+        border: 1px solid rgba(234, 178, 5, 0.2);
     }
 
-    .card-back-services {
-        border-radius: 8px;
-        border: 1px solid #504e4e;
+    .card-front::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 4px;
+        background: #EAB205;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+    }
+
+    .service-card:hover .card-front::before {
+        opacity: 1;
+    }
+
+    .card-back {
+        background: linear-gradient(145deg, rgba(0, 68, 153, 0.95), rgba(0, 51, 115, 0.95));
+        transform: rotateY(180deg);
+        color: white;
+    }
+
+    .service-icon {
+        width: 80px;
+        height: 90px;
+        margin-bottom: 1.5rem;
+        transition: transform 0.3s ease;
+    }
+
+    .service-card:hover .service-icon {
+        transform: scale(1.1);
+    }
+
+    .service-title {
+        color: #2d3748;
+        font-size: 1.5rem;
+        font-weight: 600;
+        margin-bottom: 1rem;
+        position: relative;
+        padding-bottom: 1rem;
+    }
+
+    .service-title::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 50px;
+        height: 3px;
+        background: #EAB205;
+        border-radius: 1.5px;
+    }
+
+    .card-back .service-title {
+        color: white;
+    }
+
+    .card-back .service-title::after {
+        background: white;
+    }
+
+    .service-description {
+        font-size: 1rem;
+        line-height: 1.6;
+        color: #000000;
+        margin-bottom: 1.5rem;
+    }
+
+    .card-back .service-description {
+        color: rgba(255, 255, 255, 0.9);
+    }
+
+    .service-background {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
         height: 100%;
-        color: #333;
-        transform: rotateX(180deg);
+        opacity: 0.1;
+        object-fit: cover;
+        z-index: -1;
     }
 
-    .servicio-card-img-top {
-        width: 15%;
-        height: auto;
-        margin-bottom: 20px;
-    }
-
-    .card-body {
-        text-align: center;
-        display: grid;
-        align-items: center;
-    }
-
-    @media (max-width: 767px) {
-        .servicio-card {
-            height: 52vh;
-            width: 100%;
-            
+    @media (max-width: 768px) {
+        .services-section {
+            padding: 3rem 0;
         }
-        .servicio-card-img-top {
-        width: 30%;
-        height: auto;
-        margin-bottom: 20px;
-        }
-    }
 
-    @media (min-width: 768px) {
-        .servicio-card {
+        .service-card {
             height: 350px;
-           
         }
-        .servicio-card-img-top {
-        width: 20%;
-        height: auto;
-        margin-bottom: 20px;
-        }
-    }
 
-    @media (min-width: 992px) {
-        .servicio-card {
-            height: 45vh;
-            width: 100%;
+        .services-header h1 {
+            font-size: 2rem;
+        }
+
+        .services-header h3 {
+            font-size: 1.1rem;
+        }
+
+        .service-title {
+            font-size: 1.25rem;
         }
     }
 </style>
 
-<div class="container-servicios" >
-    <h5 class="text-black">Nuestros servicios</h5>
-    <h2 class="text-black">Ofreciendo Siempre el mejor servicio</h2>
+<section class="services-section">
+    <div class="container">
+        <div class="services-header">
+            <h1>Nuestros Servicios</h1>
+            <h3>Ofreciendo siempre la mejor calidad y tecnología</h3>
+        </div>
 
-    <div class="container-servicios" id="nuestros-servicios">
-        <div class="row">
-            <div class="col-12 col-md-6 col-lg-4 mb-4" id="servicio-ISP">
-                <div class="servicio-card">
-                    <div class="servicio-card-inner">
-                        <div class="card-front-services">
-                            <img src="{{ asset('images/servicio1.svg') }}" class="servicio-card-img-top" alt="Servicio 1">
-                            <div class="card-body">
-                                <h3 class="card-title">Servicio de ISP</h3>
-                                <p class="card-text">Transmisión y tecnologías de acceso, xPON y punto a punto</p>
-                            </div>
+        <div class="row g-4" id="servicio-isp">
+            <!-- Servicio ISP -->
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="service-card">
+                    <div class="service-card-inner">
+                        <div class="card-front">
+                            <img src="{{ asset('images/servicio1.svg') }}" class="service-icon" alt="Servicio ISP">
+                            <h3 class="service-title">Servicio de ISP</h3>
+                            <p class="service-description">
+                                Transmisión y tecnologías de acceso, xPON y punto a punto
+                            </p>
                         </div>
-                        <div class="card-back-services" style="background: linear-gradient(rgba(12, 90, 219, 0.8),rgba(12, 90, 219, 0.8)),url('{{ asset('images/fondo_service1.jpeg') }}') center center no-repeat;background-size: cover;">
-                            <div class="card-body">
-                                <h5 class="card-title">Pagos inteligentes</h5>
-                                <p class="card-text text-white">El servicio de ISP consta del acceso o conectividad a Internet mediante una red de Routers interconectados con una salida internacional al backbone de Internet con fibra óptica como medio de transmisión y tecnologías de acceso, xPON y punto a punto</p>
-                            </div>
+                        <div class="card-back">
+                            <img src="{{ asset('images/fondo_service1.jpeg') }}" class="service-background"
+                                alt="Fondo ISP">
+                            <h3 class="service-title">Conectividad Avanzada</h3>
+                            <p class="service-description">
+                                El servicio de ISP consta del acceso o conectividad a Internet mediante una red de
+                                Routers interconectados con una salida internacional al backbone de Internet con fibra
+                                óptica como medio de transmisión y tecnologías de acceso, xPON y punto a punto.
+                            </p>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <div class="col-12 col-md-6 col-lg-4 mb-4" id="servicio-CyD">
-                <div class="servicio-card">
-                    <div class="servicio-card-inner">
-                        <div class="card-front-services">
-                            <img src="{{ asset('images/servicio2.svg') }}" class="servicio-card-img-top" alt="Servicio 2">
-                            <div class="card-body">
-                                <h3 class="card-title">Servicios de Conmutación y Datos</h3>
-                                <p class="card-text">Servicio de transporte de datos transparente de un punto a otro a través de su red</p>
-                            </div>
+            <!-- Servicio de Conmutación -->
+            <div class="col-12 col-md-6 col-lg-4" id="conmutacion-datos">
+                <div class="service-card">
+                    <div class="service-card-inner">
+                        <div class="card-front">
+                            <img src="{{ asset('images/servicio2.svg') }}" class="service-icon"
+                                alt="Servicio de Conmutación">
+                            <h3 class="service-title">Servicios de Conmutación y Datos</h3>
+                            <p class="service-description">
+                                Servicio de transporte de datos transparente de un punto a otro
+                            </p>
                         </div>
-                        <div class="card-back-services" style="background: linear-gradient(rgba(12, 90, 219, 0.8),rgba(12, 90, 219, 0.8)),url('{{ asset('images/fondo_service2.jpeg') }}') center center no-repeat;background-size: cover;">
-                            <div class="card-body">
-                                <h5 class="card-title">Servicios de Conmutación y Datos</h5>
-                                <p class="card-text text-white">Colombianet ofrece el servicio de transporte de datos transparente de un punto a otro a través de su red garantizando una capacidad simétrica disponible entre los extremos donde se requiera la conectividad</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-12 col-md-6 col-lg-4 mb-4" id="servicio-TV">
-                <div class="servicio-card">
-                    <div class="servicio-card-inner">
-                        <div class="card-front-services">
-                            <img src="{{ asset('images/servicio3.svg') }}" class="servicio-card-img-top" alt="Servicio 3">
-                            <div class="card-body">
-                                <h3 class="card-title">Servicio de TV por suscripción</h3>
-                                <p class="card-text">Registro habilitante ante el ministerio TIC para prestar el servicio de televisión por suscripción.</p>
-                            </div>
-                        </div>
-                        <div class="card-back-services" style="background: linear-gradient(rgba(12, 90, 219, 0.8),rgba(12, 90, 219, 0.8)),url('{{ asset('images/fondo_service3.jpeg') }}') center center no-repeat;background-size: cover;">
-                            <div class="card-body">
-                                <h5 class="card-title">Servicio de TV por suscripción</h5>
-                                <p class="card-text text-white">Colombianet cuenta con registro habilitante ante el ministerio TIC para prestar el servicio de televisión por suscripción.</p>
-                            </div>
+                        <div class="card-back">
+                            <img src="{{ asset('images/fondo_service2.jpeg') }}" class="service-background"
+                                alt="Fondo Conmutación">
+                            <h3 class="service-title">Transporte de Datos</h3>
+                            <p class="service-description">
+                                Colombianet ofrece el servicio de transporte de datos transparente de un punto a otro a
+                                través de su red garantizando una capacidad simétrica disponible entre los extremos
+                                donde se requiera la conectividad.
+                            </p>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <div class="col-12 col-md-6 col-lg-4 mb-4" id="servicio-VoIP">
-                <div class="servicio-card">
-                    <div class="servicio-card-inner">
-                        <div class="card-front-services">
-                            <img src="{{ asset('images/servicio4.svg') }}" class="servicio-card-img-top" alt="Servicio 4">
-                            <div class="card-body">
-                                <h3 class="card-title">Servicio de VoIP</h3>
-                                <p class="card-text">Ofrece la posibilidad de realizar llamadas a todo destino, nacional e internacional</p>
-                            </div>
+            <!-- Servicio de TV por suscripción -->
+            <div class="col-12 col-md-6 col-lg-4" id="servicio-tv">
+                <div class="service-card">
+                    <div class="service-card-inner">
+                        <div class="card-front">
+                            <img src="{{ asset('images/servicio3.svg') }}" class="service-icon"
+                                alt="Servicio de Conmutación">
+                            <h3 class="service-title">Servicio de TV por suscripción</h3>
+                            <p class="service-description">
+                                Registro habilitante ante el ministerio TIC para prestar el servicio de televisión por
+                                suscripción.
+                            </p>
                         </div>
-                        <div class="card-back-services" style="background: linear-gradient(rgba(12, 90, 219, 0.8),rgba(12, 90, 219, 0.8)),url('{{ asset('images/fondo_service1.jpeg') }}') center center no-repeat;background-size: cover;">
-                            <div class="card-body">
-                                <h5 class="card-title">Servicio de VoIP</h5>
-                                <p class="card-text text-white">Este servicio se encuentra en proceso de implementación, y se prestará sobre las redes físicas ya existentes, este servicio ofrece la posibilidad de realizar llamadas a todo destino, nacional e internacional, así como recepción de llamadas entrantes de cualquier destino</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-12 col-md-6 col-lg-4 mb-4" id="servicio-Telecomu">
-                <div class="servicio-card">
-                    <div class="servicio-card-inner">
-                        <div class="card-front-services">
-                            <img src="{{ asset('images/servicio5.svg') }}" class="servicio-card-img-top" alt="Servicio 5">
-                            <div class="card-body">
-                                <h3 class="card-title">Servicios de Telecomunicaciones</h3>
-                                <p class="card-text">Colombianet cuenta con un amplio conocimiento, experiencia y manejo en el sector de las Telecomunicaciones en labores</p>
-                            </div>
-                        </div>
-                        <div class="card-back-services" style="background: linear-gradient(rgba(12, 90, 219, 0.8),rgba(12, 90, 219, 0.8)),url('{{ asset('images/fondo_service2.jpeg') }}') center center no-repeat;background-size: cover;">
-                            <div class="card-body">
-                                <h5 class="card-title">Servicios de Telecomunicaciones</h5>
-                                <p class="card-text text-white">• Instalación, configuración, y mantenimiento de radioenlaces de microondas.</p>
-                                <p class="card-text text-white">• Instalación, configuración, y mantenimiento de estaciones satelitales.</p>
-                            </div>
+                        <div class="card-back">
+                            <img src="{{ asset('images/fondo_service3.jpeg') }}" class="service-background"
+                                alt="Fondo Conmutación">
+                            <h3 class="service-title">Servicio de TV por suscripción</h3>
+                            <p class="service-description">
+                                Colombianet cuenta con registro habilitante ante el ministerio TIC para prestar el
+                                servicio de televisión por suscripción. 
+                            </p>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <div class="col-12 col-md-6 col-lg-4 mb-4" id="servicio-CentroDatos">
-                <div class="servicio-card">
-                    <div class="servicio-card-inner">
-                        <div class="card-front-services">
-                            <img src="{{ asset('images/servicio6.svg') }}" class="servicio-card-img-top" alt="Servicio 6">
-                            <div class="card-body">
-                                <h3 class="card-title">Construcción de Centros de Datos</h3>
-                                <p class="card-text">Planeación e implementación de la infraestructura física óptima para los centros de datos.</p>
-                            </div>
+            <!-- Servicio de VoIP -->
+            <div class="col-12 col-md-6 col-lg-4" id="servicio-voip">
+                <div class="service-card">
+                    <div class="service-card-inner">
+                        <div class="card-front">
+                            <img src="{{ asset('images/servicio4.svg') }}" class="service-icon"
+                                alt="Servicio de Conmutación">
+                            <h3 class="service-title">Servicio de VoIP</h3>
+                            <p class="service-description">
+                                Ofrece la posibilidad de realizar llamadas a todo destino, nacional e internacional
+                            </p>
                         </div>
-                        <div class="card-back-services" style="background: linear-gradient(rgba(12, 90, 219, 0.8),rgba(12, 90, 219, 0.8)),url('{{ asset('images/fondo_service3.jpeg') }}') center center no-repeat;background-size: cover;">
-                            <div class="card-body">
-                                <h5 class="card-title">Construcción de Centros de Datos</h5>
-                                <p class="card-text text-white">Colombianet ofrece servicio de planeación e implementación de la infraestructura física óptima para los centros de datos, teniendo en cuenta factores como ventilación, distribución eléctrica, iluminación, seguridad y conectividad.</p>
-                            </div>
+                        <div class="card-back">
+                            <img src="{{ asset('images/fondo_service1.jpeg') }}" class="service-background"
+                                alt="Fondo Conmutación">
+                            <h3 class="service-title">Servicio de VoIP</h3>
+                            <p class="service-description">
+                                Este servicio se encuentra en proceso de implementación, y se prestará sobre las redes
+                                físicas ya existentes, este servicio ofrece la posibilidad de realizar llamadas a todo
+                                destino, nacional e internacional, así como recepción de llamadas entrantes de cualquier
+                                destino.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Servicios de Telecomunicaciones -->
+            <div class="col-12 col-md-6 col-lg-4" id="telecomunicaciones">
+                <div class="service-card">
+                    <div class="service-card-inner">
+                        <div class="card-front">
+                            <img src="{{ asset('images/servicio5.svg') }}" class="service-icon"
+                                alt="Servicio de Conmutación">
+                            <h3 class="service-title">Servicios de Telecomunicaciones</h3>
+                            <p class="service-description">
+                                Colombianet cuenta con un amplio conocimiento, experiencia y manejo en el sector de las
+                                Telecomunicaciones en labores
+                            </p>
+                        </div>
+                        <div class="card-back">
+                            <img src="{{ asset('images/fondo_service2.jpeg') }}" class="service-background"
+                                alt="Fondo Conmutación">
+                            <h3 class="service-title">Servicios de Telecomunicaciones</h3>
+                            <p class="service-description">
+                                • Instalación, configuración, y mantenimiento de radioenlaces de microondas.
+                            </p>
+                            <p class="service-description">
+                                • Instalación, configuración, y mantenimiento de estaciones satelitales.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Construcción de Centros de Datos -->
+            <div class="col-12 col-md-6 col-lg-4" id="construccion-datos">
+                <div class="service-card">
+                    <div class="service-card-inner">
+                        <div class="card-front">
+                            <img src="{{ asset('images/servicio6.svg') }}" class="service-icon"
+                                alt="Servicio de Conmutación">
+                            <h3 class="service-title">Construcción de Centros de Datos</h3>
+                            <p class="service-description">
+                                Planeación e implementación de la infraestructura física óptima para los centros de
+                                datos.
+                            </p>
+                        </div>
+                        <div class="card-back">
+                            <img src="{{ asset('images/fondo_service3.jpeg') }}" class="service-background"
+                                alt="Fondo Conmutación">
+                            <h3 class="service-title">Construcción de Centros de Datos</h3>
+                            <p class="service-description">
+                                Colombianet ofrece servicio de planeación e implementación de la infraestructura física
+                                óptima para los centros de datos, teniendo en cuenta factores como ventilación,
+                                distribución eléctrica, iluminación, seguridad y conectividad.
+                            </p>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
+</section>

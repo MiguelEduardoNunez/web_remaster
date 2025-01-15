@@ -1,7 +1,7 @@
 <style>
     .container-intereses {
         background-color: #f1f1f1;
-        padding: 50px;
+        padding: 30px;
         text-align: center;
     }
 
@@ -16,21 +16,23 @@
         flex-direction: column;
         align-items: center;
         margin-bottom: 20px;
-        overflow: hidden; /* Asegura que las imágenes no se desborden */
+        overflow: hidden;
+        transition: transform 0.4s ease, box-shadow 0.4s ease;
     }
 
     .interest-card:hover {
-        rotate: 5deg;
-        transition: all 0.2s;
+        transform: rotate(5deg);
+        box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
     }
 
     .interest-card img {
         border-top-left-radius: 8px;
         border-top-right-radius: 8px;
         width: 100%;
-        height: 30vh; /* Altura fija para todas las imágenes */
+        height: 200px;
+        height: 30vh;
         object-fit: cover;
-        object-position: center; /* Centra la imagen */
+        object-position: center;
     }
 
     .interest-card h5 {
@@ -48,7 +50,6 @@
             margin-top: 20px;
         }
     }
-
 </style>
 
 <div class="container-intereses">
@@ -80,7 +81,7 @@
         </div>
         <div class="col-lg-3 col-md-6 col-sm-12">
             <div class="interest-card">
-                <a href="https://www.sic.gov.co/" target="_blank">
+                <a href="https://www.crcom.gov.co/es" target="_blank">
                     <img src="{{ asset('/images/comision_comunicacion.webp') }}" alt="Superintendencia de Industria y Comercio (SIC)" class="img-fluid">
                 </a>
                 <h5>Comisión de regulación de comunicaciones (Crc)</h5>

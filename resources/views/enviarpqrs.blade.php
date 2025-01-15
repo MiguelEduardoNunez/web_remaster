@@ -16,7 +16,7 @@
     <h2>Información de la PQRS</h2>
     <p><strong>Trámite a presentar:</strong> {{ $selec_pqrs }}</p>
     <p><strong>Objeto de la PQR:</strong> {{ $objeto_pqrs }}</p>
-    <p><strong>Hechos:</strong> {{ $hechos_text_area }}</p>
+    <p><strong>Hechos:</strong> {{ $hechos }}</p>
     <p><strong>Departamento:</strong> {{ $departamento }}</p>
     <p><strong>Ciudad:</strong> {{ $ciudad }}</p>
     <p><strong>Dirección:</strong> {{ $direccion }}</p>
