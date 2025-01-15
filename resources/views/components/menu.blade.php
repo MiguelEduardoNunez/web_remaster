@@ -1,7 +1,7 @@
 <style>
     .dropdown-menu {
         /* Ajustes generales del menu */
-        min-width: 305px;
+        min-width: 380px;
         max-width: 400px;
         width: auto;
     }
@@ -14,14 +14,14 @@
     }
 
     .navbar-nav .nav-link.active {
-    font-weight: bold;
-    color: black !important;
+        font-weight: bold;
+        color: black !important;
     }
 
     .dropdown-menu li a:hover {
         /* Color de fondo al pasar el puntero del mause */
         background-color: #004899;
-        color: white;
+        color: #fff;
     }
 
     .dropdown-menu li a {
@@ -60,7 +60,7 @@
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownRegulacion" role="button" data-bs-toggle="dropdown" aria-expanded="false"><b>Regulación</b></a>
-                    <ul class="dropdown-menu dropdown-menu-end text-center" aria-labelledby="navbarDropdownRegulacion">
+                    <ul class="dropdown-menu dropdown-menu-end text-center p-2" aria-labelledby="navbarDropdownRegulacion">
                         <li><a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#dignidadInfantilModal">Dignidad Infantil</a></li>
                         <li><a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#habeasDataModal">Habeas data</a></li>
                         <li><a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#centralRiesgoModal">Actualización o retiro de centrales de riesgo</a></li>
@@ -74,7 +74,7 @@
 
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownInfo" role="button" data-bs-toggle="dropdown" aria-expanded="false"><b>Información para el Usuario</b></a>
-                    <ul class="dropdown-menu dropdown-menu-end text-center" aria-labelledby="navbarDropdownInfo">
+                    <ul class="dropdown-menu dropdown-menu-end text-center p-2" aria-labelledby="navbarDropdownInfo">
                         <li><a class="dropdown-item" href="/formulario-pqrs">Formulario de PQRS</a></li>
                         <li><a class="dropdown-item" href="{{ asset('archivos/PROCEDIMIENTO Y TRAMITE DE PQRS.pdf') }}" target="_blank">Procedimiento Trámite de PQRS</a></li>
                         <li><a class="dropdown-item" href="{{ asset('archivos/Seguridad-en-plantas-IP.pdf') }}" target="_blank">Seguridad Plantas IP</a></li>

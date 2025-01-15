@@ -57,6 +57,9 @@
     border-top: 1px solid #444;
     margin: 20px 0;
   }
+  .icon {
+    margin-left: 5px;
+  }
 
   /* Responsive styles */
   @media (max-width: 767.98px) {
@@ -99,9 +102,9 @@
             <div class="col-12 col-md-6 col-lg-3 mb-4">
                 <h2 class="widget-title">Contacto</h2>
                 <div class="footer-address">
-                    <div><i class="bi bi-geo-alt-fill address-icon"></i><b>Dirección:</b> Cra.9#76N-19 Parque Empresarial Los Pinos Bodega 22, Popayán, Cauca, Colombia</div>
-                    <div><i class="bi bi-telephone-fill address-icon"></i><b>Linea Gratuita:</b> 01 8000 189 098</div>
-                    <div><i class="bi bi-envelope-fill address-icon"></i><b>Correo electrónico:</b> info@sepcom.com.co</div>
+                    <div><i class="bi bi-geo-alt-fill address-icon"></i><b class="icon">Dirección:</b> Cra.9#76N-19 Parque Empresarial Los Pinos Bodega 22, Popayán, Cauca, Colombia</div>
+                    <div><i class="bi bi-telephone-fill address-icon"></i><b class="icon">Linea Gratuita:</b> 01 8000 189 098</div>
+                    <div><i class="bi bi-envelope-fill address-icon"></i><b class="icon">Correo electrónico:</b> info@sepcom.com.co</div>
                 </div>
             </div>
             <div class="col-12 col-md-6 col-lg-3 mb-1">
