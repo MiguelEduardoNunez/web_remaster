@@ -54,6 +54,7 @@
         .form-group textarea {
             min-height: 100px;
         }
+
     </style>
 </head>
 
@@ -61,14 +62,14 @@
     <x-header />
     <x-menu />
     <main>
-        <section class="content-section">
+        <section class="content-section ">
             <div class="breadcumb-area">
                 <div class="container">
                     <div class="row">
                         <div class="col-12">
                             <div class="breadcumb-inner text-center text-white p-4" style="background: #111A3A">
                                 <h1>Formulario PQRS</h1>
-                                <h3>Deja tus peticiones, quejas y reclamos en nuestras manos</h3>
+                                <h3>Deja tus peticiones quejas y reclamos en nuestras manos</h3>
                             </div>
                         </div>
                     </div>
@@ -102,6 +103,9 @@
 				 	@if ($errors->has('numero_cc'))
                                                 <span class="text-danger">{{ $errors->first('tipo_documento') }}</span>
                                         @endif
+				 	@if ($errors->has('numero_cc'))
+                                                <span class="text-danger">{{ $errors->first('tipo_documento') }}</span>
+                                        @endif
                                     </div>
                                     <div class="form-group">
                                         <label for="numero_cc">Número de documento <span class="text-danger fw-bold">*</span></label>
@@ -120,6 +124,9 @@
                                     <div class="form-group">
                                         <label for="tel">Número de Teléfono de contacto</label>
                                         <input id="tel" class="form-control" type="tel" name="tel" value="{{ old('tel') }}">
+				        @if ($errors->has('correo'))
+            					<span class="text-danger">{{ $errors->first('correo') }}</span>
+        				@endif
 				        @if ($errors->has('correo'))
             					<span class="text-danger">{{ $errors->first('correo') }}</span>
         				@endif
@@ -192,8 +199,9 @@
                                 </div>
                             </div>
 
+
                             <div class="text-center mt-4">
-                                <button type="submit" name="btn" class="btn btn-primary">Enviar</button>
+                                <button name="btn" class="btn btn-primary">Enviar</button>
                             </div>
                         </form>
                     </div>
@@ -203,7 +211,7 @@
     </main>
     <x-footer />
     <x-modals />
-
+    
     <!-- Modal -->
     @if(session('status'))
     <div class="modal fade" id="statusModal" tabindex="-1" aria-labelledby="statusModalLabel" aria-hidden="true">
@@ -234,6 +242,7 @@
             var statusModal = new bootstrap.Modal(document.getElementById('statusModal'));
             statusModal.show();
         });
+
     </script>
     @endif
 
@@ -241,5 +250,6 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"></script>
+
 </body>
 </html>

@@ -39,7 +39,7 @@ class FormularioPQRSController extends Controller
         } catch (\Exception $e) {
             // Mensaje de error
             $status = 'error';
-            $message = 'No se pudo enviar el correo. Inténtelo de nuevo más tarde. Error: ' . $e->getMessage();
+            $message = 'No se pudo enviar el correo. Intï¿½ntelo de nuevo mï¿½s tarde. Error: ' . $e->getMessage();
 
         }
 
