@@ -8,7 +8,6 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Muli:wght@400;700&display=swap">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
     <link rel="icon" href="{{ asset('images/favicon1.ico') }}" type="image/x-icon">
-
 </head>
 
 <body style="background-color: #F1F1F1;">

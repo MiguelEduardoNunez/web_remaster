@@ -95,7 +95,6 @@
         }
   
     }
-
 </style>
 
 <div class="carousel-container">

@@ -2,7 +2,6 @@
     .header_azul {
         height: 8vh;
         background-color: #004899;
-
     }
 
     .header_logo {
@@ -31,7 +30,6 @@
             height: 6vh;
         }
     }
-
 </style>
 
 <nav class="header_azul navbar navbar-expand-lg navbar-dark color_fondo" aria-label="Header Azul">
