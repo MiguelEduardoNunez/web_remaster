@@ -87,6 +87,16 @@
             myModal.show();
         });
 
+        // Detener los videos al cerrar el modal
+        var mediaModal = document.getElementById('mediaModal');
+        mediaModal.addEventListener('hidden.bs.modal', function() {
+            // Obtener todos los videos dentro del modal
+            var videos = mediaModal.querySelectorAll('video');
+            videos.forEach(function(video) {
+                video.pause(); // Pausar el video
+                video.currentTime = 0; // Reiniciar el video al inicio (opcional)
+            });
+        });
     </script>
 
     <!-- Bootstrap 5.3 -->

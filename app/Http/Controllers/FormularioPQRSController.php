@@ -42,7 +42,6 @@ class FormularioPQRSController extends Controller
             $message = 'No se pudo enviar el correo. Int�ntelo de nuevo m�s tarde. Error: ' . $e->getMessage();
 
         }
-
         return redirect()->route('formulario.pqrs')->with('status', $status)->with('message', $message);
     }
 }
