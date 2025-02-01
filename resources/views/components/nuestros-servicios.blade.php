@@ -198,17 +198,17 @@
 
 <section class="services-section">
     <div class="container">
-        <div class="services-header">
+        <div class="services-header" data-aos="fade-up" data-aos-delay="100">
             <h1>Nuestros Servicios</h1>
             <h3>Ofreciendo siempre la mejor calidad y tecnología</h3>
         </div>
 
         <div class="row g-4" id="servicio-isp">
             <!-- Servicio ISP -->
-            <div class="col-12 col-md-6 col-lg-4">
+            <div class="col-12 col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
                 <div class="service-card">
                     <div class="service-card-inner">
-                        <div class="card-front">
+                        <div class="card-front" >
                             <img src="{{ asset('images/servicio1.svg') }}" class="service-icon" alt="Servicio ISP">
                             <h3 class="service-title">Servicio de ISP</h3>
                             <p class="service-description">
@@ -230,7 +230,7 @@
             </div>
 
             <!-- Servicio de Conmutación -->
-            <div class="col-12 col-md-6 col-lg-4" id="conmutacion-datos">
+            <div class="col-12 col-md-6 col-lg-4" id="conmutacion-datos" data-aos="fade-up" data-aos-delay="300">
                 <div class="service-card">
                     <div class="service-card-inner">
                         <div class="card-front">
@@ -256,7 +256,7 @@
             </div>
 
             <!-- Servicio de TV por suscripción -->
-            <div class="col-12 col-md-6 col-lg-4" id="servicio-tv">
+            <div class="col-12 col-md-6 col-lg-4" id="servicio-tv" data-aos="fade-up" data-aos-delay="400">
                 <div class="service-card">
                     <div class="service-card-inner">
                         <div class="card-front">
@@ -282,7 +282,7 @@
             </div>
 
             <!-- Servicio de VoIP -->
-            <div class="col-12 col-md-6 col-lg-4" id="servicio-voip">
+            <div class="col-12 col-md-6 col-lg-4" id="servicio-voip" data-aos="fade-up" data-aos-delay="200">
                 <div class="service-card">
                     <div class="service-card-inner">
                         <div class="card-front">
@@ -309,7 +309,7 @@
             </div>
 
             <!-- Servicios de Telecomunicaciones -->
-            <div class="col-12 col-md-6 col-lg-4" id="telecomunicaciones">
+            <div class="col-12 col-md-6 col-lg-4" id="telecomunicaciones" data-aos="fade-up" data-aos-delay="300">
                 <div class="service-card">
                     <div class="service-card-inner">
                         <div class="card-front">
@@ -337,7 +337,7 @@
             </div>
 
             <!-- Construcción de Centros de Datos -->
-            <div class="col-12 col-md-6 col-lg-4" id="construccion-datos">
+            <div class="col-12 col-md-6 col-lg-4" id="construccion-datos" data-aos="fade-up" data-aos-delay="400">
                 <div class="service-card">
                     <div class="service-card-inner">
                         <div class="card-front">

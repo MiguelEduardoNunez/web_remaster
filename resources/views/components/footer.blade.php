@@ -18,7 +18,7 @@
   }
 
   .footer a:hover {
-    color: #F39C12;
+    color: #fcbf00;
     text-decoration: underline;
   }
 
@@ -26,7 +26,7 @@
     font-size: 1.75rem;
     font-weight: bold;
     margin-bottom: 1.5rem;
-    color: #F39C12;
+    color: #fcbf00;
   }
 
   .footer .social-icons {
@@ -57,6 +57,7 @@
     border-top: 1px solid #444;
     margin: 20px 0;
   }
+
   .icon {
     margin-left: 5px;
   }
@@ -69,6 +70,11 @@
 
     .footer .social-icons {
       justify-content: center;
+    }
+
+    /* Ocultar la sección "Nuestros servicios" en dispositivos móviles */
+    .ocultar {
+      display: none;
     }
   }
 </style>
@@ -88,7 +94,7 @@
                     </a>
                 </div>
             </div>
-            <div class="col-12 col-md-6 col-lg-3 mb-4">
+            <div class="col-12 col-md-6 col-lg-3 mb-4 ocultar">
                 <h2 class="widget-title">Nuestros servicios</h2>
                 <ul class="list-unstyled">
                     <li class="footer-link"><a href="#servicio-isp">Servicio de ISP</a></li>

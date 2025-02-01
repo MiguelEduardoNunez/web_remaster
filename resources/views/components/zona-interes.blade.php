@@ -53,9 +53,11 @@
 </style>
 
 <div class="container-intereses">
-    <h1 class="mb-4">Zona De Interés</h1>
+    <nav class="w-100 text-center mb-4" data-aos="fade-up" data-aos-delay="0">
+        <h1 class="main-title" style="color: #2d3748;">Zona De Interés</h1>
+    </nav>
     <div class="row justify-content-center">
-        <div class="col-lg-3 col-md-6 col-sm-12 mb-4 mb-md-0">
+        <div class="col-lg-3 col-md-6 col-sm-12 mb-4 mb-md-0" data-aos="fade-up" data-aos-delay="100">
             <div class="interest-card">
                 <a href="https://www.fiscalia.gov.co/colombia/" target="_blank">
                     <img src="{{ asset('/images/fiscalia_logo.png') }}" alt="Fiscalía General de la Nación" class="img-fluid">
@@ -63,7 +65,7 @@
                 <h5>Fiscalía General de la Nación</h5>
             </div>
         </div>
-        <div class="col-lg-3 col-md-6 col-sm-12 mb-4 mb-md-0">
+        <div class="col-lg-3 col-md-6 col-sm-12 mb-4 mb-md-0" data-aos="fade-up" data-aos-delay="200">
             <div class="interest-card">
                 <a href="https://www.mintic.gov.co/portal/inicio/" target="_blank">
                     <img src="{{ asset('/images/mintic_logo.png') }}" alt="Ministerio de tecnologías de la información y las comunicaciones (MinTic)" class="img-fluid">
@@ -71,7 +73,7 @@
                 <h5>Ministerio de tecnologías de la información y las comunicaciones (MinTic)</h5>
             </div>
         </div>
-        <div class="col-lg-3 col-md-6 col-sm-12 mb-4 mb-md-0">
+        <div class="col-lg-3 col-md-6 col-sm-12 mb-4 mb-md-0" data-aos="fade-up" data-aos-delay="300">
             <div class="interest-card">
                 <a href="https://www.sic.gov.co/" target="_blank">
                     <img src="{{ asset('/images/industria_comercio_logo.png') }}" alt="Superintendencia de Industria y Comercio (SIC)" class="img-fluid">
@@ -79,7 +81,7 @@
                 <h5>Superintendencia de Industria y Comercio (SIC)</h5>
             </div>
         </div>
-        <div class="col-lg-3 col-md-6 col-sm-12">
+        <div class="col-lg-3 col-md-6 col-sm-12" data-aos="fade-up" data-aos-delay="400">
             <div class="interest-card">
                 <a href="https://www.crcom.gov.co/es" target="_blank">
                     <img src="{{ asset('/images/comision_comunicacion.webp') }}" alt="Superintendencia de Industria y Comercio (SIC)" class="img-fluid">

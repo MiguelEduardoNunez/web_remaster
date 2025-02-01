@@ -56,6 +56,9 @@
                     <a class="nav-link" href="/nosotros"><b>Nosotros</b></a>
                 </li>
                 <li class="nav-item">
+                    <a class="nav-link" href="/planes"><b>Planes</b></a>
+                </li>
+                <li class="nav-item">
                     <a class="nav-link" href="https://colombianet.speedtestcustom.com" target="blank"><b>Medidor de Velocidad</b></a>
                 </li>
                 <li class="nav-item dropdown">

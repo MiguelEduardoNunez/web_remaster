@@ -8,7 +8,16 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Muli:wght@400;700&display=swap">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
     <link rel="icon" href="{{ asset('images/favicon1.ico') }}" type="image/x-icon">
+
+    
+    <!-- AOS (Animate On Scroll) CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
 </head>
+<style>
+    *{
+        font-family: 'Muli', sans-serif;
+    }
+</style>
 
 <body style="background-color: #F1F1F1;">
     <x-header />
@@ -16,6 +25,7 @@
     <x-carousel />
     <x-info />
     <x-nuestros-servicios />
+    <x-planesComponent />
     <x-zona-interes />
     <x-footer />
     <x-modals />
@@ -101,7 +111,22 @@
     <!-- Bootstrap 5.3 -->
     <!-- Bootstrap JavaScript dependencies -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"></script>
 </body>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        AOS.init({
+            duration: 800,  // Duración de la animación en milisegundos
+            easing: "ease-in-out",
+            once: false,  // La animación se repite al hacer scroll hacia arriba y hacia abajo
+        });
+
+        // Actualizar las animaciones cuando el usuario hace scroll
+        window.addEventListener('scroll', function() {
+            AOS.refresh();
+        });
+    });
+</script>
 </html>

@@ -11,6 +11,10 @@
 
     <link rel="icon" href="{{ asset('images/favicon1.ico') }}" type="image/x-icon">
     <style>
+        *{
+        font-family: 'Muli', sans-serif;
+        }
+        
         /* Estilos específicos para la vista Nosotros */
         .content-section {
             padding: 2rem 0;
@@ -59,7 +63,7 @@
     </style>
 </head>
 
-<body class="antialiased">
+<body class="antialiased" style="background-color: #F1F1F1;">
     <x-header />
     <x-menu />
     <main>

@@ -1,12 +1,16 @@
 <style>
+    body {
+        font-family: Arial, sans-serif;
+    }
+
     .custom-services-container {
-        background-color: #F1F1F1;
         padding: 3rem 0;
         margin: 2rem 0;
     }
 
     .custom-service-card {
-        height: 250px; /* Altura ajustada */
+        height: 250px;
+        /* Altura ajustada */
         perspective: 1000px;
         /* margin-bottom: 2rem; */
     }
@@ -21,7 +25,8 @@
     }
 
     .custom-service-card-back .d-flex.flex-column {
-        gap: 0.3rem; /* Espaciado reducido entre los botones */
+        gap: 0.3rem;
+        /* Espaciado reducido entre los botones */
     }
 
     .custom-service-card:hover .custom-service-card-inner {
@@ -54,7 +59,8 @@
     }
 
     .custom-service-icon {
-        width: 80px; /* Tamaño más grande */
+        width: 80px;
+        /* Tamaño más grande */
         height: 80px;
         margin-bottom: 0.5rem;
         object-fit: contain;
@@ -125,7 +131,7 @@
     <div class="container">
         <div class="row g-4">
             <!-- Tarjeta PSE -->
-            <div class="col-12 col-md-6 col-lg-4">
+            <div class="col-12 col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="0">
                 <div class="custom-service-card">
                     <div class="custom-service-card-inner">
                         <div class="custom-service-card-front">
@@ -135,7 +141,8 @@
                         </div>
                         <div class="custom-service-card-back">
                             <h3 class="custom-service-title">Pagos Seguros</h3>
-                            <p class="custom-service-text">Utiliza nuestra plataforma PSE para realizar tus pagos de forma segura y eficiente</p>
+                            <p class="custom-service-text">Utiliza nuestra plataforma PSE para realizar tus pagos de
+                                forma segura y eficiente</p>
                             <a href="https://www.psepagos.co/PSEHostingUI/ShowTicketOffice.aspx?ID=6553"
                                 class="custom-service-button" target="_blank">
                                 Pagar Ahora
@@ -146,24 +153,28 @@
             </div>
 
             <!-- Tarjeta Soporte -->
-            <div class="col-12 col-md-6 col-lg-4">
+            <div class="col-12 col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
                 <div class="custom-service-card">
                     <div class="custom-service-card-inner">
                         <div class="custom-service-card-front">
-                            <img src="{{ asset('images/soporte_icon.png') }}" class="custom-service-icon" alt="Soporte">
+                            <img src="{{ asset('images/soporte_icon.png') }}" class="custom-service-icon"
+                                alt="Soporte">
                             <h3 class="custom-service-title">Soporte Técnico</h3>
                             <p class="custom-service-text">Asistencia profesional 24/7</p>
                         </div>
                         <div class="custom-service-card-back">
                             <h3 class="custom-service-title">Canales de Soporte</h3>
                             <div class="d-flex flex-column w-100">
-                                <a href="https://api.whatsapp.com/send?phone=573174327901" class="custom-service-button" target="_blank">
+                                <a href="https://api.whatsapp.com/send?phone=573174327901" class="custom-service-button"
+                                    target="_blank">
                                     Nivel I Popayán
                                 </a>
-                                <a href="https://api.whatsapp.com/send?phone=573174274601" class="custom-service-button" target="_blank">
+                                <a href="https://api.whatsapp.com/send?phone=573174274601" class="custom-service-button"
+                                    target="_blank">
                                     Nivel I Guapi
                                 </a>
-                                <a href="https://api.whatsapp.com/send?phone=573162697428" class="custom-service-button" target="_blank">
+                                <a href="https://api.whatsapp.com/send?phone=573162697428" class="custom-service-button"
+                                    target="_blank">
                                     Nivel II NOC
                                 </a>
                             </div>
@@ -173,17 +184,19 @@
             </div>
 
             <!-- Tarjeta PQR -->
-            <div class="col-12 col-md-6 col-lg-4">
+            <div class="col-12 col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
                 <div class="custom-service-card">
                     <div class="custom-service-card-inner">
                         <div class="custom-service-card-front">
-                            <img src="{{ asset('images/peticion_icon.png') }}" class="custom-service-icon" alt="PQR">
+                            <img src="{{ asset('images/peticion_icon.png') }}" class="custom-service-icon"
+                                alt="PQR">
                             <h3 class="custom-service-title">Atención PQR</h3>
                             <p class="custom-service-text">Gestiona tus solicitudes</p>
                         </div>
                         <div class="custom-service-card-back">
                             <h3 class="custom-service-title">Sistema PQR</h3>
-                            <p class="custom-service-text">Realiza tus peticiones, quejas o reclamos de manera fácil y rápida</p>
+                            <p class="custom-service-text">Realiza tus peticiones, quejas o reclamos de manera fácil y
+                                rápida</p>
                             <a href="/formulario-pqrs" class="custom-service-button">
                                 Crear PQRS
                             </a>
