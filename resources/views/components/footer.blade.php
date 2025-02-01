@@ -89,7 +89,7 @@
                 <p>Colombianet Sepcom Ingeniería y Telecomunicaciones.</p>
                 <p>Síguenos en nuestras redes</p>
                 <div class="social-icons d-flex">
-                    <a target="_blank" href="https://www.facebook.com/oficialcolombianet">
+                    <a target="_blank" href="https://www.facebook.com/colombianet.popayan">
                       <img src="{{ asset('images/facebook_icon.png') }}" alt="Facebook" class="social-icon">
                     </a>
                 </div>
