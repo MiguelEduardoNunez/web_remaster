@@ -89,7 +89,7 @@
                 <ul class="list-group list-group-flush plan-list">
                     <a href="/planes" class="text-decoration-none text-dark">
                         <li class="list-group-item">📺 Planes con TV</li>
-                        <li class="list-group-item">🚫 Planes sin TV</li>
+                        <li class="list-group-item">📡 Planes solo Internet</li>
                     </a>
                 </ul>
             </div>

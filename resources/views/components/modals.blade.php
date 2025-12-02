@@ -284,6 +284,22 @@
             <ul>
                 <li>Cra.9#76N-19 Parque Empresarial Los Pinos Bodega 22, Popayán, Cauca, Colombia</li>
             </ul>
+            
+            Mapa de Google
+            <div class="my-3">
+            <iframe 
+                width="100%" 
+                height="300" 
+                style="border:0;" 
+                loading="lazy"
+                allowfullscreen
+                referrerpolicy="no-referrer-when-downgrade"
+                src="https://www.google.com/maps?q=2.488727747062006,-76.56076792698364&hl=es&z=17&t=k&output=embed">
+            </iframe>
+
+
+            </div>
+
             <h3>Horario</h3>
             <ul>
                 <li>Lunes a viernes: 07:00am a 12:00pm y 02:00pm a 06:00pm</li>
@@ -299,6 +315,7 @@
             </ul>
         </div>
     </x-modal>
+
 
     <!-- Modal Prevención Fraude y Riesgos Informáticos -->
     <x-modal id="prevencionFraudeModal" title="Prevención Fraude y Riesgos Informáticos">
@@ -321,6 +338,62 @@
                 <li>Soporte técnico: Nivel 1 Popayán 317 4327901 - Nivel 2 Guapi 3174274601 - Nivel 2 316 2697428</li>
                 <li>Línea gratuita: 01 8000 189 098</li>
             </ul>
+        </div>
+    </x-modal>
+
+    <!-- Modal Control Parental -->
+    <x-modal id="controlParental" title="Control Parental">
+        <div class="modal-body">
+            <p>El control parental hace referencia a herramientas y configuraciones que permiten a los padres o
+                tutores supervisar, limitar y gestionar el acceso de los niños a contenidos y actividades en
+                dispositivos electrónicos, como teléfonos, computadoras, tabletas, consolas de videojuegos y otros
+                dispositivos conectados a internet.
+            </p>
+            <p>Estas herramientas permiten establecer restricciones sobre:</p>
+            <ol>
+                <li> <b>Acceso a contenido:</b> Los padres pueden bloquear o filtrar contenidos inapropiados según la
+                    edad del niño, como sitios web, videos o aplicaciones.
+                </li>
+                <li> <b>Tiempo de pantalla:</b> Pueden limitar el tiempo que los niños pasan frente a las pantallas de los dispositivos.</li>
+                <li> <b>Control de compras y descargas:</b> Se puede restringir la capacidad de realizar compras en
+                    línea o descargar aplicaciones sin la autorización del adulto.
+                </li>
+                <li> <b>Supervisión de actividad:</b> Permiten monitorear qué aplicaciones o sitios web están
+                    utilizando, y también pueden generar reportes sobre el uso del dispositivo.
+                </li>
+                <li> <b>Comunicación y redes sociales:</b> A veces incluyen opciones para supervisar las interacciones
+                    del niño en redes sociales, mensajería y juegos en línea.
+                </li>
+            </ol>
+            
+            <p>El objetivo del control parental es proteger a los niños de contenidos no adecuados y ayudar a los
+                padres a gestionar el tiempo y la seguridad digital de sus hijos. <b>COLOMBIANET</b> en su compromiso
+                de cuidar la primera infancia, recomienda el uso de las siguientes herramientas gestionadas por
+                padres, instituciones, tutores y supervisores:
+            </p>
+        
+            <div class="row">
+            @foreach([
+                ['Google Family Link', 'Android, iOS', 'Monitoreo de actividad, límites de tiempo, bloqueo de apps, rastreo de ubicación.', 'google'],
+                ['Qustodio', 'Windows, Mac, Android, iOS', 'Seguimiento de actividad, filtrado de contenido, informes detallados.', 'shield'],
+                ['Norton Family', 'Windows, Mac, Android, iOS', 'Supervisión en línea, bloqueo de sitios web, rastreo de ubicación.', 'lock'],
+                ['Kaspersky Safe Kids', 'Windows, Mac, Android, iOS', 'Monitoreo en línea, bloqueo de apps, control de redes sociales.', 'eye'],
+                ['Circle Home Plus', 'Router doméstico', 'Filtros de contenido, límites de tiempo, pausas de internet.', 'wifi'],
+                ['Bark', 'Windows, Mac, Android, iOS', 'Monitoreo de redes sociales, alertas de ciberacoso y contenido inapropiado.', 'message-circle'],
+                ['Net Nanny', 'Windows, Mac, Android, iOS', 'Filtrado de contenido, alertas de seguridad, control de tiempo de pantalla.', 'alert-circle'],
+                ['OpenDNS FamilyShield', 'DNS para red doméstica', 'Bloqueo de sitios web inapropiados automáticamente.', 'globe']
+            ] as $tool)
+                <div class="col-md-6 mb-3">
+                    <div class="card shadow-sm">
+                        <div class="card-body">
+                            <h6 class="card-title"><i class="bi bi-{{ $tool[3] }}"></i> <b>{{ $tool[0] }}</b></h6>
+                            <p class="small text-muted"><b>Plataformas:</b> {{ $tool[1] }}</p>
+                            <p class="small">{{ $tool[2] }}</p>
+                        </div>
+                    </div>
+                </div>
+            @endforeach
+        </div> 
         </div>
     </x-modal>
 </div>

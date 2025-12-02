@@ -3,13 +3,20 @@
     .carousel-container {
         width: 100%;
         display: flex;
-        justify-content: center;
-        align-items: center;
-        padding-top: 10px;
+        padding: 0;
+        /* justify-content: center;
+        align-items: center; */
+        /* padding-top: 10px; */
     }
 
     /* Tama�o del carrusel */
     .carousel {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+    .carousel-inner {
         width: 100%;
     }
 
@@ -17,7 +24,7 @@
     .carousel-item {
         width: 100%;
         height: 100%;
-        object-fit: cover;
+        object-fit: contain;
     }
 
     /* Estilos del �cono de reproducci�n */
@@ -84,49 +91,52 @@
 
     @media (min-width: 768px) {
         .carousel {
-            width: 87%;
+            width: 100%;
         }
-        
+
     }
 
     @media (min-width: 992px) {
         .carousel {
-            width: 90%;
+            width: 100%;
         }
-  
+
     }
 </style>
 
 <div class="carousel-container">
-    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000" data-bs-wrap="true">
+    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000"
+        data-bs-wrap="true">
         <div class="carousel-inner">
             <div class="carousel-item active">
                 <img src="{{ asset('images/carrusel_1.jpg') }}" class="d-block w-100" alt="Slide 1">
             </div>
-            {{-- <div class="carousel-item">
-                <img src="{{ asset('images/carrousel_2.png') }}" class="d-block w-100" alt="Slide 2">
-           </div>--}}
-           <div class="carousel-item">
+            <div class="carousel-item">
+                <img src="{{ asset('images/carroucel_amoryamistad.jpg') }}" class="d-block w-100" alt="Slide 2">
+            </div>
+            <!-- <div class="carousel-item">
                 <img src="{{ asset('images/carrousel_3.png') }}" class="d-block w-100" alt="Slide 3">
                 <a href="#" class="padre-play" data-bs-toggle="modal" data-bs-target="#videoGrooming">
                     <img src="{{ asset('images/play_icon.png') }}" class="play-icon" alt="Play icon">
                 </a>
-            </div>
+            </div> -->
             <div class="carousel-item">
                 <img src="{{ asset('images/carrusel_4.jpeg') }}" class="d-block w-100" alt="Slide 4">
             </div>
         </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
             <span class="visually-hidden">Previous</span>
         </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="next">
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
             <span class="visually-hidden">Next</span>
         </button>
     </div>
     <!-- Modal -->
-    <div class="modal fade" id="videoGrooming" tabindex="-1" aria-labelledby="videoModalLabel" aria-hidden="true">
+    <!-- <div class="modal fade" id="videoGrooming" tabindex="-1" aria-labelledby="videoModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered modal-lg">
             <div class="modal-content">
                 <div class="modal-header">
@@ -140,14 +150,17 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
 </div>
 {{-- <div class="d-flex justify-content-center align-items-center mt-5">
-    <img src="{{ asset('images/planes_escalofriantes.jpeg') }}" class="rounded-3 mr-3 flex-shrink-0" alt="Slide 2" style="width: 20%; height: auto;">
-    <img src="{{ asset('images/hallowen_carusel.png') }}" class="rounded-3 mx-3" alt="Slide 2" style="width: 55%; height: auto;">
-    <img src="{{ asset('images/codigoqr.jpeg') }}" class="rounded-3 mr-3 flex-shrink-0" alt="Slide 2" style="width: 20%; height: auto;">
+    <img src="{{ asset('images/planes_escalofriantes.jpeg') }}" class="rounded-3 mr-3 flex-shrink-0" alt="Slide 2"
+        style="width: 20%; height: auto;">
+    <img src="{{ asset('images/hallowen_carusel.png') }}" class="rounded-3 mx-3" alt="Slide 2"
+        style="width: 55%; height: auto;">
+    <img src="{{ asset('images/codigoqr.jpeg') }}" class="rounded-3 mr-3 flex-shrink-0" alt="Slide 2"
+        style="width: 20%; height: auto;">
 </div> --}}
-<script>
+<!-- <script>
     document.addEventListener('DOMContentLoaded', function() {
         var videoModal = document.getElementById('videoGrooming');
         var videoIframe = document.getElementById('videoIframe');
@@ -161,4 +174,4 @@
             videoIframe.src = "";
         });
     });
-</script>
+</script> -->

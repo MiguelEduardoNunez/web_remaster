@@ -196,7 +196,7 @@
                     <a href="{{ asset('images/estrato1,2y3sintv.png') }}" class="glightbox" data-gallery="gallery1">
                         <img src="{{ asset('images/estrato1,2y3sintv.png') }}" alt="Planes Estrato 1, 2 y 3 Sin TV">
                     </a>
-                    <h4 class="card-title text-center">Internet sin TV</h4>
+                    <h4 class="card-title text-center">Planes solo Internet</h4>
                     <div class="card-body">
                         <ul class="feature-list">
                             <li><i class="bi bi-check-circle-fill"></i> Internet de alta velocidad</li>

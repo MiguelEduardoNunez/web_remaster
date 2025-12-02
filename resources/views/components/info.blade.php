@@ -6,6 +6,7 @@
     .custom-services-container {
         padding: 3rem 0;
         margin: 2rem 0;
+        /* border: solid 1px black; */
     }
 
     .custom-service-card {
@@ -107,6 +108,11 @@
         box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     }
 
+    .icon-wompi {
+        background: #FFFFFF;
+        border-radius: 100%;
+    }
+
     @media (max-width: 768px) {
         .custom-service-card {
             height: 180px;
@@ -126,12 +132,36 @@
         }
     }
 </style>
-
 <div class="custom-services-container">
     <div class="container">
         <div class="row g-4">
-            <!-- Tarjeta PSE -->
+            <!-- Tarjeta Wompi -->
             <div class="col-12 col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="0">
+                <div class="custom-service-card">
+                    <div class="custom-service-card-inner">
+                        <!-- Lado frontal de la tarjeta -->
+                        <div class="custom-service-card-front">
+                            <img src="{{ asset('images/Wompi.svg') }}" class="custom-service-icon icon-wompi"
+                                alt="Icono de Wompi">
+                            <h3 class="custom-service-title">Pagos en Línea con Wompi</h3>
+                            <p class="custom-service-text">Paga de forma rápida y segura desde tu banco favorito.</p>
+                        </div>
+                        <!-- Lado trasero de la tarjeta -->
+                        <div class="custom-service-card-back">
+                            <h3 class="custom-service-title">Transacciones Seguras</h3>
+                            <p class="custom-service-text">
+                                Realiza tus pagos en línea a través de nuestra pasarela segura WOMPI. Compatible con
+                                Bancolombia, Nequi, PSE y otras entidades bancarias del país.
+                            </p>
+                            <a href="https://checkout.wompi.co/l/xC81uN" class="custom-service-button" target="_blank">
+                                Realizar Pago
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- <div class="col-12 col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="0">
                 <div class="custom-service-card">
                     <div class="custom-service-card-inner">
                         <div class="custom-service-card-front">
@@ -150,15 +180,14 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> -->
 
             <!-- Tarjeta Soporte -->
             <div class="col-12 col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
                 <div class="custom-service-card">
                     <div class="custom-service-card-inner">
                         <div class="custom-service-card-front">
-                            <img src="{{ asset('images/soporte_icon.png') }}" class="custom-service-icon"
-                                alt="Soporte">
+                            <img src="{{ asset('images/soporte_icon.png') }}" class="custom-service-icon" alt="Soporte">
                             <h3 class="custom-service-title">Soporte Técnico</h3>
                             <p class="custom-service-text">Asistencia profesional 24/7</p>
                         </div>
@@ -188,8 +217,7 @@
                 <div class="custom-service-card">
                     <div class="custom-service-card-inner">
                         <div class="custom-service-card-front">
-                            <img src="{{ asset('images/peticion_icon.png') }}" class="custom-service-icon"
-                                alt="PQR">
+                            <img src="{{ asset('images/peticion_icon.png') }}" class="custom-service-icon" alt="PQR">
                             <h3 class="custom-service-title">Atención PQR</h3>
                             <p class="custom-service-text">Gestiona tus solicitudes</p>
                         </div>

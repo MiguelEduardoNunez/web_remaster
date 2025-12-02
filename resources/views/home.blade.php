@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Muli:wght@400;700&display=swap">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
     <link rel="icon" href="{{ asset('images/favicon1.ico') }}" type="image/x-icon">
+    
 
     
     <!-- AOS (Animate On Scroll) CSS -->
@@ -41,43 +42,49 @@
                 <div class="modal-body">
                     <div class="container">
                         <div class="row g-3">
-                            <!-- Video Principal -->
-                            <div class="col-12">
-                                <video src="{{ asset('media/noticia_vid.mp4') }}" class="d-block w-100 rounded" autoplay loop muted></video>
-                            </div>
-                            <div class="col-12">
-                                <img src="{{ asset('images/ano2025.png') }}" class="img-fluid rounded shadow" alt="Noticia 2">
-                            </div>
-                            <!-- Im�genes 1 y 2 en la misma fila -->
-                            <div class="col-6">
-                                <img src="{{ asset('images/noticia_3.jpeg') }}" class="img-fluid rounded shadow" alt="Info Navidad">
-                            </div>
-                            <div class="col-6">
-                                <img src="{{ asset('images/codigoqr.jpeg') }}" class="img-fluid rounded shadow" alt="C�digo QR">
-                            </div>
-                            <!-- Im�genes 3 y 4 en la misma fila -->
-                            <div class="col-6">
-                                <img src="{{ asset('images/noticia_2.jpeg') }}" class="img-fluid rounded shadow" alt="Noticia 2">
-                            </div>
+                        <!-- Video Principal -->
+                        <div class="col-12">
+                            <video src="{{ asset('media/noticia_vid.mp4') }}" class="d-block w-100 rounded shadow" autoplay loop muted></video>
+                        </div>
 
-                            <!-- Im�genes 5 y 6 + Video -->
-                            <div class="col-6">
-                                <img src="{{ asset('images/noticia_4.jpeg') }}" class="img-fluid rounded shadow" alt="Noticia 4">
-                            </div>
-                            <div class="col-12">
-                                <video class="img-fluid rounded shadow" autoplay loop muted>
-                                    <source src="{{ asset('media/ipv6.mp4') }}" type="video/mp4">
-                                    Tu navegador no soporta el elemento de video.
-                                </video>
-                            </div>
-                            <!-- Video con controles -->
-                            <div class="col-12 mt-4">
-                                <h5>Escanear canales de televisión</h5>
-                                <video class="img-fluid rounded shadow" controls>
-                                    <source src="{{ asset('media/busqueda_canales.mp4') }}" type="video/mp4">
-                                    Tu navegador no soporta el elemento de video.
-                                </video>
-                            </div>
+                        <!-- Imagen horizontal principal (postnavidad.jpeg) -->
+                        <div class="col-12">
+                            <img src="{{ asset('images/postnavidad.jpeg') }}" class="img-fluid rounded shadow w-100" alt="Post Navidad">
+                        </div>
+
+                        <!-- Primera fila de imágenes (2 verticales) -->
+                        <div class="col-6">
+                            <img src="{{ asset('images/noticia_3.jpeg') }}" class="img-fluid rounded shadow" alt="Info Navidad">
+                        </div>
+                        <div class="col-6">
+                            <img src="{{ asset('images/codigoqr.jpeg') }}" class="img-fluid rounded shadow" alt="Código QR">
+                        </div>
+
+                        <!-- Segunda fila de imágenes (2 verticales) -->
+                        <div class="col-6">
+                            <img src="{{ asset('images/noticia_2.jpeg') }}" class="img-fluid rounded shadow" alt="Noticia 2">
+                        </div>
+                        <div class="col-6">
+                            <img src="{{ asset('images/noticia_4.jpeg') }}" class="img-fluid rounded shadow" alt="Noticia 4">
+                        </div>
+
+                        <!-- Video IPV6 -->
+                        <div class="col-12">
+                            <video class="img-fluid rounded shadow w-100" autoplay loop muted>
+                                <source src="{{ asset('media/ipv6.mp4') }}" type="video/mp4">
+                                Tu navegador no soporta el elemento de video.
+                            </video>
+                        </div>
+
+                        <!-- Video con controles -->
+                        <div class="col-12 mt-4">
+                            <h5>Escanear canales de televisión</h5>
+                            <video class="img-fluid rounded shadow w-100" controls>
+                                <source src="{{ asset('media/busqueda_canales.mp4') }}" type="video/mp4">
+                                Tu navegador no soporta el elemento de video.
+                            </video>
+                        </div>
+
                         </div>
                     </div>
                 </div>
