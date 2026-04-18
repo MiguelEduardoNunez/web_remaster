@@ -10,11 +10,12 @@
     }
 
     /* Tama�o del carrusel */
-    .carousel {
-        width: 100%;
-        margin: 0;
-        padding: 0;
-    }
+.carousel {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    min-height: 30vh; /* ← esto sí funciona sin romper el layout */
+}
 
     .carousel-inner {
         width: 100%;
@@ -22,9 +23,13 @@
 
     /* Tama�o de las im�genes */
     .carousel-item {
+        min-height: 30vh; /* controla el alto del slide */
+    }
+
+    .carousel-item img {
         width: 100%;
         height: 100%;
-        object-fit: contain;
+        object-fit: cover; /* o contain, según lo que quieras */
     }
 
     /* Estilos del �cono de reproducci�n */
@@ -105,24 +110,16 @@
 </style>
 
 <div class="carousel-container">
-    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000"
+    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000"
         data-bs-wrap="true">
         <div class="carousel-inner">
             <div class="carousel-item active">
-                <img src="{{ asset('images/carrusel_1.jpg') }}" class="d-block w-100" alt="Slide 1">
+                <img src="{{ asset('images/post_1_1600x800.png') }}" class="d-block w-100" alt="Slide 1">
             </div>
-            <div class="carousel-item">
-                <img src="{{ asset('images/carroucel_amoryamistad.jpg') }}" class="d-block w-100" alt="Slide 2">
-            </div>
+
             <!-- <div class="carousel-item">
-                <img src="{{ asset('images/carrousel_3.png') }}" class="d-block w-100" alt="Slide 3">
-                <a href="#" class="padre-play" data-bs-toggle="modal" data-bs-target="#videoGrooming">
-                    <img src="{{ asset('images/play_icon.png') }}" class="play-icon" alt="Play icon">
-                </a>
+                <img src="{{ asset('images/final.png') }}" class="d-block w-100" alt="Slide 4">
             </div> -->
-            <div class="carousel-item">
-                <img src="{{ asset('images/carrusel_4.jpeg') }}" class="d-block w-100" alt="Slide 4">
-            </div>
         </div>
         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
             data-bs-slide="prev">

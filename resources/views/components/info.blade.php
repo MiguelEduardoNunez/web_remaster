@@ -153,7 +153,7 @@
                                 Realiza tus pagos en línea a través de nuestra pasarela segura WOMPI. Compatible con
                                 Bancolombia, Nequi, PSE y otras entidades bancarias del país.
                             </p>
-                            <a href="https://checkout.wompi.co/l/xC81uN" class="custom-service-button" target="_blank">
+                            <a href="https://clientes.colombianet.tech/saldo/sepcom-comunicaciones-sas/" class="custom-service-button" target="_blank">
                                 Realizar Pago
                             </a>
                         </div>

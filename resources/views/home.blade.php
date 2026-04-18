@@ -49,23 +49,23 @@
 
                         <!-- Imagen horizontal principal (postnavidad.jpeg) -->
                         <div class="col-12">
-                            <img src="{{ asset('images/postnavidad.jpeg') }}" class="img-fluid rounded shadow w-100" alt="Post Navidad">
+                            <img src="{{ asset('images/img_2_principal.jpeg') }}" class="img-fluid rounded shadow w-100" alt="Post Navidad">
                         </div>
 
                         <!-- Primera fila de imágenes (2 verticales) -->
                         <div class="col-6">
-                            <img src="{{ asset('images/noticia_3.jpeg') }}" class="img-fluid rounded shadow" alt="Info Navidad">
+                            <!-- <img src="{{ asset('images/noticia_3.jpeg') }}" class="img-fluid rounded shadow" alt="Info Navidad"> -->
                         </div>
                         <div class="col-6">
-                            <img src="{{ asset('images/codigoqr.jpeg') }}" class="img-fluid rounded shadow" alt="Código QR">
+                            <!-- <img src="{{ asset('images/codigoqr.jpeg') }}" class="img-fluid rounded shadow" alt="Código QR"> -->
                         </div>
 
                         <!-- Segunda fila de imágenes (2 verticales) -->
                         <div class="col-6">
-                            <img src="{{ asset('images/noticia_2.jpeg') }}" class="img-fluid rounded shadow" alt="Noticia 2">
+                            <!-- <img src="{{ asset('images/noticia_2.jpeg') }}" class="img-fluid rounded shadow" alt="Noticia 2"> -->
                         </div>
                         <div class="col-6">
-                            <img src="{{ asset('images/noticia_4.jpeg') }}" class="img-fluid rounded shadow" alt="Noticia 4">
+                            <!-- <img src="{{ asset('images/noticia_4.jpeg') }}" class="img-fluid rounded shadow" alt="Noticia 4"> -->
                         </div>
 
                         <!-- Video IPV6 -->

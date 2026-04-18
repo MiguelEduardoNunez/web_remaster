@@ -36,7 +36,7 @@
     }
 
     .header_logo{
-        width: 150px;
+        width: 180px;
     }
 
     /* Ajustes específicos para pantallas grandes */
